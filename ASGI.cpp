@@ -663,7 +663,20 @@ void asgiDestoryGPUQuerySet(ASGI_GPUQuerySet* pQuerySet)
 
 //////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////
+#include <malloc.h>
+#include "DirectX12\DirectX12_GPU.h"
+
 ASGI_GPU* asgiCreateGPUInstance(ASGI_GPU_INTERFACE_TYPE interfaceType)
 {
+	switch (interfaceType)
+	{
+	case ASGI_GPU_INTERFACE_TYPE_VULKAN:
+		break;
+	case ASGI_GPU_INTERFACE_TYPE_DIRECTX12:
+		return (ASGI_GPU*)malloc(sizeof(DX12_GPU));
+		break;
+	default:
+		break;
+	}
 	return nullptr;
 }

@@ -1,7 +1,8 @@
 #pragma once
 
 
-
+#include "GPUSupportedFeatures.h"
+#include "GPUSupportedLimits.h"
 #include "GPUQueue.h"
 #include "GPUBufferDescriptor.h"
 #include "GPUBuffer.h"
