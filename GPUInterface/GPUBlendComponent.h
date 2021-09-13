@@ -3,8 +3,8 @@
 #include "GPUBlendOperation.h"
 #include "GPUBlendFactor.h"
 
-struct GPUBlendComponent {
-	GPUBlendOperation operation;
-	GPUBlendFactor srcFactor;
-	GPUBlendFactor dstFactor;
+struct ASGI_GPUBlendComponent {
+	ASGI_GPUBlendOperation operation;
+	ASGI_GPUBlendFactor srcFactor;
+	ASGI_GPUBlendFactor dstFactor;
 };

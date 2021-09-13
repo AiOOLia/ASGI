@@ -3,8 +3,8 @@
 #include "GPUBindGroupLayout.h"
 #include "GPUBindGroupEntry.h"
 
-struct GPUBindGroupDescriptor {
-	GPUBindGroupLayout layout;
+struct ASGI_GPUBindGroupDescriptor {
+	ASGI_GPUBindGroupLayout layout;
 	int numEntry;
-	GPUBindGroupEntry* entries;
+	ASGI_GPUBindGroupEntry* entries;
 };

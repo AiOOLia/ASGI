@@ -1,8 +1,8 @@
 #pragma once
 
 
-struct GPUQuerySet {
+struct ASGI_GPUQuerySet {
 	const char* label;
 };
 
-void destoryGPUQuerySet(GPUQuerySet* querySet);
+void asgiDestoryGPUQuerySet(ASGI_GPUQuerySet* pQuerySet);

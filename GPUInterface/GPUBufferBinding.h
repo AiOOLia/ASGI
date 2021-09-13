@@ -3,8 +3,8 @@
 #include "GPUDefines.h"
 #include "GPUBuffer.h"
 
-struct GPUBufferBinding {
-	GPUBuffer buffer;
-	GPUSize64 offset;
-	GPUSize64 size;
+struct ASGI_GPUBufferBinding {
+	ASGI_GPUBuffer buffer;
+	ASGI_GPUSize64 offset;
+	ASGI_GPUSize64 size;
 };

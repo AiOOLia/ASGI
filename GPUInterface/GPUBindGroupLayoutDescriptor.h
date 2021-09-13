@@ -2,7 +2,7 @@
 
 #include "GPUBindGroupLayoutEntry.h"
 
-struct GPUBindGroupLayoutDescriptor {
+struct ASGI_GPUBindGroupLayoutDescriptor {
 	int numEntry;
-	GPUBindGroupLayoutEntry* entries;
+	ASGI_GPUBindGroupLayoutEntry* entries;
 };

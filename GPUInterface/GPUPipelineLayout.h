@@ -1,5 +1,5 @@
 #pragma once
 
-struct GPUPipelineLayout {
+struct ASGI_GPUPipelineLayout {
 	const char* label;
 };

@@ -4,16 +4,16 @@
 #include "GPUFilterMode.h"
 #include "GPUCompareFunction.h"
 
-struct GPUSamplerDescriptor {
+struct ASGI_GPUSamplerDescriptor {
 	const char* label;
-	GPUAddressMode addressModeU;
-	GPUAddressMode addressModeV;
-	GPUAddressMode addressModeW;
-	GPUFilterMode magFilter;
-	GPUFilterMode minFilter;
-	GPUFilterMode mipmapFilter;
+	ASGI_GPUAddressMode addressModeU;
+	ASGI_GPUAddressMode addressModeV;
+	ASGI_GPUAddressMode addressModeW;
+	ASGI_GPUFilterMode magFilter;
+	ASGI_GPUFilterMode minFilter;
+	ASGI_GPUFilterMode mipmapFilter;
 	float lodMinClamp;
 	float lodMaxClamp;
-	GPUCompareFunction compare;
+	ASGI_GPUCompareFunction compare;
 	unsigned short maxAnisotropy = 1;
 };

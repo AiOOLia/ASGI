@@ -10,46 +10,54 @@
 #include "GPUCommandBufferDescriptor.h"
 #include "GPUCommandBuffer.h"
 
-struct GPUCommandEncoder {
+struct ASGI_GPUCommandEncoder {
 	const char* label;
 };
 
-GPURenderPassEncoder* beginRenderPass(GPUCommandEncoder* encoder, GPURenderPassDescriptor* descriptor);
-GPUComputePassEncoder* beginComputePass(GPUCommandEncoder* encoder, GPUComputePassDescriptor* descriptor);
+ASGI_GPURenderPassEncoder* asgiBeginRenderPass(ASGI_GPUCommandEncoder* pEncoder, ASGI_GPURenderPassDescriptor* pDescriptor);
 
-void copyBufferToBuffer(GPUCommandEncoder* encoder,
-	GPUBuffer source,
-	GPUSize64 sourceOffset,
-	GPUBuffer destination,
-	GPUSize64 destinationOffset,
-	GPUSize64 size);
+ASGI_GPUComputePassEncoder* asgiBeginComputePass(ASGI_GPUCommandEncoder* pEncoder, ASGI_GPUComputePassDescriptor* pDescriptor);
 
-void copyBufferToTexture(GPUCommandEncoder* encoder,
-	GPUImageCopyBuffer source,
-	GPUImageCopyTexture destination,
-	GPUExtent3D copySize);
+void asgiCopyBufferToBuffer(ASGI_GPUCommandEncoder* pEncoder,
+	ASGI_GPUBuffer* pSource,
+	ASGI_GPUSize64 sourceOffset,
+	ASGI_GPUBuffer* pDestination,
+	ASGI_GPUSize64 destinationOffset,
+	ASGI_GPUSize64 size
+);
 
-void copyTextureToBuffer(GPUCommandEncoder* encoder,
-	GPUImageCopyTexture source,
-	GPUImageCopyBuffer destination,
-	GPUExtent3D copySize);
+void asgiCopyBufferToTexture(ASGI_GPUCommandEncoder* pEncoder,
+	ASGI_GPUImageCopyBuffer* pSource,
+	ASGI_GPUImageCopyTexture* pDestination,
+	ASGI_GPUExtent3D copySize
+);
 
-void copyTextureToTexture(GPUCommandEncoder* encoder,
-	GPUImageCopyTexture source,
-	GPUImageCopyTexture destination,
-	GPUExtent3D copySize);
+void asgiCopyTextureToBuffer(ASGI_GPUCommandEncoder* pEncoder,
+	ASGI_GPUImageCopyTexture* pSource,
+	ASGI_GPUImageCopyBuffer* pDestination,
+	ASGI_GPUExtent3D copySize
+);
 
-void pushDebugGroup(GPUCommandEncoder* encoder, const char* groupLabel);
-void popDebugGroup(GPUCommandEncoder* encoder);
-void insertDebugMarker(GPUCommandEncoder* encoder, const char* markerLabel);
+void asgiCopyTextureToTexture(ASGI_GPUCommandEncoder* pEncoder,
+	ASGI_GPUImageCopyTexture* pSource,
+	ASGI_GPUImageCopyTexture* pDestination,
+	ASGI_GPUExtent3D copySize
+);
 
-void writeTimestamp(GPUCommandEncoder* encoder, GPUQuerySet querySet, GPUSize32 queryIndex);
+void asgiPushDebugGroupCE(ASGI_GPUCommandEncoder* pEncoder, const char* groupLabel);
 
-void resolveQuerySet(GPUCommandEncoder* encoder,
-	GPUQuerySet querySet,
-	GPUSize32 firstQuery,
-	GPUSize32 queryCount,
-	GPUBuffer destination,
-	GPUSize64 destinationOffset);
+void asgiPopDebugGroupCE(ASGI_GPUCommandEncoder* pEncoder);
 
-GPUCommandBuffer finishCommandEncoder(GPUCommandEncoder* encoder, GPUCommandBufferDescriptor* descriptor);
+void asgiInsertDebugMarkerCE(ASGI_GPUCommandEncoder* pEncoder, const char* markerLabel);
+
+void asgiWriteTimestampCE(ASGI_GPUCommandEncoder* pEncoder, ASGI_GPUQuerySet* pQuerySet, ASGI_GPUSize32 queryIndex);
+
+void asgiResolveQuerySet(ASGI_GPUCommandEncoder* pEncoder,
+	ASGI_GPUQuerySet* pQuerySet,
+	ASGI_GPUSize32 firstQuery,
+	ASGI_GPUSize32 queryCount,
+	ASGI_GPUBuffer* pDestination,
+	ASGI_GPUSize64 destinationOffset
+);
+
+ASGI_GPUCommandBuffer* asgiFinishCommandEncoder(ASGI_GPUCommandEncoder* pEncoder, ASGI_GPUCommandBufferDescriptor* pDescriptor);

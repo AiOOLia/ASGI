@@ -1,7 +1,7 @@
 #pragma once
 
 
-struct GPUShaderModuleDescriptor {
+struct ASGI_GPUShaderModuleDescriptor {
 	const char* code;
 	void* sourceMap;
 };

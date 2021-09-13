@@ -1,6 +1,6 @@
 #pragma once
 
-struct GPUCommandBuffer {
+struct ASGI_GPUCommandBuffer {
 	const char* label;
 	const double executionTime;
 };

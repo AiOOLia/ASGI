@@ -5,12 +5,12 @@
 #include "GPUTextureViewDimension.h"
 #include "GPUTextureAspect.h"
 
-struct GPUTextureViewDescriptor {
-	GPUTextureFormat format;
-	GPUTextureViewDimension dimension;
-	GPUTextureAspect aspect;
-	GPUIntegerCoordinate baseMipLevel;
-	GPUIntegerCoordinate mipLevelCount;
-	GPUIntegerCoordinate baseArrayLayer;
-	GPUIntegerCoordinate arrayLayerCount;
+struct ASGI_GPUTextureViewDescriptor {
+	ASGI_GPUTextureFormat format;
+	ASGI_GPUTextureViewDimension dimension;
+	ASGI_GPUTextureAspect aspect;
+	ASGI_GPUIntegerCoordinate baseMipLevel;
+	ASGI_GPUIntegerCoordinate mipLevelCount;
+	ASGI_GPUIntegerCoordinate baseArrayLayer;
+	ASGI_GPUIntegerCoordinate arrayLayerCount;
 };

@@ -2,8 +2,9 @@
 
 #include "GPUSupportedFeatures.h"
 #include "GPUSupportedLimits.h"
-struct GPUDeviceDescriptor {
+
+struct ASGI_GPUDeviceDescriptor {
 	const char* label;
-	GPUSupportedFeatures requiredFeatures;
-	GPUSupportedLimits requiredLimits;
+	ASGI_GPUSupportedFeatures requiredFeatures;
+	ASGI_GPUSupportedLimits requiredLimits;
 };

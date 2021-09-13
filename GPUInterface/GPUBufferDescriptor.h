@@ -3,8 +3,8 @@
 #include "GPUDefines.h"
 #include "GPUBufferUsage.h"
 
-struct GPUBufferDescriptor {
-	GPUSize64 size;
-	GPUBufferUsageFlags usage;
+struct ASGI_GPUBufferDescriptor {
+	ASGI_GPUSize64 size;
+	ASGI_GPUBufferUsageFlags usage;
 	bool mappedAtCreation;
 };

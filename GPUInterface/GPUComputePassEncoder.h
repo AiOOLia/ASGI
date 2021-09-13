@@ -3,18 +3,23 @@
 
 #include "GPUComputePipeline.h"
 #include "GPUBuffer.h"
+#include "GPUProgrammablePassEncoder.h"
 
-struct GPUComputePassEncoder {
+struct ASGI_GPUComputePassEncoder {
 	const char* label;
+	ASGI_GPUProgrammablePassEncoder* programmablePassEncoder;
 };
 
-void setPipeline(GPUComputePassEncoder* encoder, GPUComputePipeline pipeline);
-void dispatch(GPUComputePassEncoder* encoder, GPUSize32 x, GPUSize32 y = 1, GPUSize32 z = 1);
-void dispatchIndirect(GPUComputePassEncoder* encoder, GPUBuffer indirectBuffer, GPUSize64 indirectOffset);
+void asgiSetPipeline(ASGI_GPUComputePassEncoder* pEncoder, ASGI_GPUComputePipeline* pPipeline);
 
-void beginPipelineStatisticsQuery(GPUComputePassEncoder* encoder, GPUQuerySet querySet, GPUSize32 queryIndex);
-void endPipelineStatisticsQuery(GPUComputePassEncoder* encoder);
+void asgiDispatch(ASGI_GPUComputePassEncoder* pEncoder, ASGI_GPUSize32 x, ASGI_GPUSize32 y = 1, ASGI_GPUSize32 z = 1);
 
-void writeTimestamp(GPUComputePassEncoder* encoder, GPUQuerySet querySet, GPUSize32 queryIndex);
+void asgiDispatchIndirect(ASGI_GPUComputePassEncoder* pEncoder, ASGI_GPUBuffer* pIndirectBuffer, ASGI_GPUSize64 indirectOffset);
 
-void endComputePass(GPUComputePassEncoder* encoder);
+void asgiBeginPipelineStatisticsQuery(ASGI_GPUComputePassEncoder* pEncoder, ASGI_GPUQuerySet* pQuerySet, ASGI_GPUSize32 queryIndex);
+
+void asgiEndPipelineStatisticsQuery(ASGI_GPUComputePassEncoder* pEncoder);
+
+void asgiWriteTimestamp(ASGI_GPUComputePassEncoder* pEncoder, ASGI_GPUQuerySet* pQuerySet, ASGI_GPUSize32 queryIndex);
+
+void asgiEndComputePass(ASGI_GPUComputePassEncoder* pEncoder);

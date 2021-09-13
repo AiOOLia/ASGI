@@ -1,9 +1,9 @@
 #pragma once
 
-enum GPUPipelineStatisticType {
-	VertexShaderInvocations,
-	ClipperInvocations,
-	ClipperPrimitivesOut,
-	FragmentShaderInvocations,
-	ComputeShaderInvocations
+enum ASGI_GPUPipelineStatisticType {
+	ASGI_PIPLINE_STATISTIC_TYPE_VertexShaderInvocations,
+	ASGI_PIPLINE_STATISTIC_TYPE_ClipperInvocations,
+	ASGI_PIPLINE_STATISTIC_TYPE_ClipperPrimitivesOut,
+	ASGI_PIPLINE_STATISTIC_TYPE_FragmentShaderInvocations,
+	ASGI_PIPLINE_STATISTIC_TYPE_ComputeShaderInvocations
 };

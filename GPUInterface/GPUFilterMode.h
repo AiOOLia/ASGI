@@ -1,6 +1,6 @@
 #pragma once
 
-enum GPUFilterMode {
-	Nearest,
-	Linear
+enum ASGI_GPUFilterMode {
+	ASGI_FILTER_MODE_Nearest,
+	ASGI_FILTER_MODE_Linear
 };

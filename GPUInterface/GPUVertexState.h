@@ -4,12 +4,12 @@
 #include "GPUDefines.h"
 #include "GPUVertexBufferLayout.h"
 
-struct GPUVertexState {
-	GPUShaderModule* module;
+struct ASGI_GPUVertexState {
+	ASGI_GPUShaderModule* module;
 	const char* entryPoint;
 	int numConstant;
 	const char* const* names;
-	GPUPipelineConstantValue* values;
+	ASGI_GPUPipelineConstantValue* values;
 	int numBuffer;
-	GPUVertexBufferLayout* buffers;
+	ASGI_GPUVertexBufferLayout* buffers;
 };

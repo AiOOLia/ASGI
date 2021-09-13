@@ -1,17 +1,17 @@
 #pragma once
 
-enum GPUBlendFactor {
-	Zero,
-	One,
-	Src,
-	OneMinusSrc,
-	SrcAlpha,
-	OneMinusSrcAlpha,
-	Dst,
-	OneMinusDst,
-	DstAlpha,
-	OneMinusDstAlpha,
-	SrcAlphaSaturated,
-	Constant,
-	OneMinusConstant
+enum ASGI_GPUBlendFactor {
+	ASGI_BLEND_FACTOR_Zero,
+	ASGI_BLEND_FACTOR_One,
+	ASGI_BLEND_FACTOR_Src,
+	ASGI_BLEND_FACTOR_OneMinusSrc,
+	ASGI_BLEND_FACTOR_SrcAlpha,
+	ASGI_BLEND_FACTOR_OneMinusSrcAlpha,
+	ASGI_BLEND_FACTOR_Dst,
+	ASGI_BLEND_FACTOR_OneMinusDst,
+	ASGI_BLEND_FACTOR_DstAlpha,
+	ASGI_BLEND_FACTOR_OneMinusDstAlpha,
+	ASGI_BLEND_FACTOR_SrcAlphaSaturated,
+	ASGI_BLEND_FACTOR_Constant,
+	ASGI_BLEND_FACTOR_OneMinusConstant
 };

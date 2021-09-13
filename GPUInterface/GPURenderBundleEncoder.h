@@ -5,10 +5,10 @@
 #include "GPUProgrammablePassEncoder.h"
 #include "GPURenderEncoderBase.h"
 
-struct GPURenderBundleEncoder {
+struct ASGI_GPURenderBundleEncoder {
 	const char* label;
-	struct GPUProgrammablePassEncoder* programmablePassEncoder;
-	struct GPURenderEncoderBase* renderEncoderBase;
+	struct ASGI_GPUProgrammablePassEncoder* programmablePassEncoder;
+	struct ASGI_GPURenderEncoderBase* renderEncoder;
 };
 
-GPURenderBundle* finishRenderBundleEncoder(GPURenderBundleEncoder* encoder, GPURenderBundleDescriptor* descriptor);
+ASGI_GPURenderBundle* asgiFinishRenderBundleEncoder(ASGI_GPURenderBundleEncoder* pEncoder, ASGI_GPURenderBundleDescriptor* pDescriptor);

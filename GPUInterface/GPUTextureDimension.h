@@ -1,7 +1,7 @@
 #pragma once
 
-enum GPUTextureDimension {
-	D1,
-	D2,
-	D3
+enum ASGI_GPUTextureDimension {
+	ASGI_TEX_DIMENSION_D1,
+	ASGI_TEX_DIMENSION_D2,
+	ASGI_TEX_DIMENSION_D3
 };

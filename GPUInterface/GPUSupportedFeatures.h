@@ -1,6 +1,6 @@
 #pragma once
 
-struct GPUSupportedFeatures {
+struct ASGI_GPUSupportedFeatures {
 	bool depth_clamping;
 	bool depth24unorm_stencil8;
 	bool depth32float_stencil8;

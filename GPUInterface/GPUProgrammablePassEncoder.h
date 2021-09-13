@@ -3,18 +3,23 @@
 #include "GPUDefines.h"
 #include "GPUBindGroup.h"
 
-struct GPUProgrammablePassEncoder {
+struct ASGI_GPUProgrammablePassEncoder {
 };
 
-void setBindGroup(GPUProgrammablePassEncoder* encoder,
-	GPUIndex32 index, GPUBindGroup bindGroup, int numOffset, GPUBufferDynamicOffset* dynamicOffsets);
+void asgiSetBindGroup(ASGI_GPUProgrammablePassEncoder* pEncoder,
+	ASGI_GPUIndex32 index, ASGI_GPUBindGroup* pBindGroup, 
+	int numOffset, ASGI_GPUBufferDynamicOffset* dynamicOffsets
+);
 
-void setBindGroupRange(GPUProgrammablePassEncoder* encoder,
-	GPUIndex32 index, GPUBindGroup bindGroup,
+void asgiSetBindGroupRange(ASGI_GPUProgrammablePassEncoder* pEncoder,
+	ASGI_GPUIndex32 index, ASGI_GPUBindGroup* pBindGroup,
 	int numoffsetsData, unsigned int* dynamicOffsetsData,
-	GPUSize64 dynamicOffsetsDataStart,
-	GPUSize32 dynamicOffsetsDataLength);
+	ASGI_GPUSize64 dynamicOffsetsDataStart,
+	ASGI_GPUSize32 dynamicOffsetsDataLength
+);
 
-void pushDebugGroup(GPUProgrammablePassEncoder* encoder, const char* groupLabel);
-void popDebugGroup(GPUProgrammablePassEncoder* encoder);
-void insertDebugMarker(GPUProgrammablePassEncoder* encoder, const char* markerLabel);
+void asgiPushDebugGroupPPE(ASGI_GPUProgrammablePassEncoder* pEncoder, const char* groupLabel);
+
+void asgiPopDebugGroupPPE(ASGI_GPUProgrammablePassEncoder* pEncoder);
+
+void asgiInsertDebugMarkerPPE(ASGI_GPUProgrammablePassEncoder* pEncoder, const char* markerLabel);

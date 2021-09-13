@@ -1,7 +1,7 @@
 #pragma once
 #include "GPUPowerPreference.h"
 
-struct GPURequestAdapterOptions {
-	GPUPowerPreference powerPreference;
+struct ASGI_GPURequestAdapterOptions {
+	ASGI_GPUPowerPreference powerPreference;
 	bool forceFallbackAdapter;
 };

@@ -5,19 +5,19 @@
 #include "GPUStencilFaceState.h"
 #include "GPUDefines.h"
 
-struct GPUDepthStencilState {
-	GPUTextureFormat format;
+struct ASGI_GPUDepthStencilState {
+	ASGI_GPUTextureFormat format;
 
 	bool depthWriteEnabled;
-	GPUCompareFunction depthCompare;
+	ASGI_GPUCompareFunction depthCompare;
 
-	GPUStencilFaceState stencilFront;
-	GPUStencilFaceState stencilBack;
+	ASGI_GPUStencilFaceState stencilFront;
+	ASGI_GPUStencilFaceState stencilBack;
 
-	GPUStencilValue stencilReadMask;
-	GPUStencilValue stencilWriteMask;
+	ASGI_GPUStencilValue stencilReadMask;
+	ASGI_GPUStencilValue stencilWriteMask;
 
-	GPUDepthBias depthBias;
+	ASGI_GPUDepthBias depthBias;
 	float depthBiasSlopeScale;
 	float depthBiasClamp;
 };

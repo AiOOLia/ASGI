@@ -1,7 +1,7 @@
 #pragma once
 
-enum GPUTextureAspect {
-	All,
-	StencilOnly,
-	DepthOnly
+enum ASGI_GPUTextureAspect {
+	ASGI_TEX_ASPECT_All,
+	ASGI_TEX_ASPECT_StencilOnly,
+	ASGI_TEX_ASPECT_DepthOnly
 };

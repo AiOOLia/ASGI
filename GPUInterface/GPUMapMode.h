@@ -1,7 +1,7 @@
 #pragma once
 
-enum GPUMapMode {
-	READ = 0x0001,
-	WRITE = 0x0002
+enum ASGI_GPUMapMode {
+	ASGI_MAP_MODE_READ = 0x0001,
+	ASGI_MAP_MODE_WRITE = 0x0002
 };
-typedef  unsigned long GPUMapModeFlags;
+typedef  unsigned long ASGI_GPUMapModeFlags;

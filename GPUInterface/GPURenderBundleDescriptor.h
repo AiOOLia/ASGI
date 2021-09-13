@@ -1,5 +1,5 @@
 #pragma once
 
-struct GPURenderBundleDescriptor {
+struct ASGI_GPURenderBundleDescriptor {
 	const char* label;
 };

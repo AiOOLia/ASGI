@@ -1,8 +1,8 @@
 #pragma once
 
-enum GPUShaderStage {
-	VERTEX = 0x1,
-	FRAGMENT = 0x2,
-	COMPUTE = 0x4
+enum ASGI_GPUShaderStage {
+	ASGI_SHADER_STAGE_VERTEX = 0x1,
+	ASGI_SHADER_STAGE_FRAGMENT = 0x2,
+	ASGI_SHADER_STAGE_COMPUTE = 0x4
 };
-typedef unsigned long GPUShaderStageFlags;
+typedef unsigned long ASGI_GPUShaderStageFlags;

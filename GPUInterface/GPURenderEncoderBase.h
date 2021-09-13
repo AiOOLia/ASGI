@@ -5,26 +5,33 @@
 #include "GPUBuffer.h"
 #include "GPUIndexFormat.h"
 
-struct GPURenderEncoderBase {
+struct ASGI_GPURenderEncoderBase {
 };
 
-void setPipeline (GPURenderEncoderBase* encoder, GPURenderPipeline pipeline);
+void asgiSetPipeline (ASGI_GPURenderEncoderBase* pEncoder, ASGI_GPURenderPipeline pipeline);
 
-void setIndexBuffer (GPURenderEncoderBase* encoder,
-	GPUBuffer buffer, GPUIndexFormat indexFormat, GPUSize64 offset, GPUSize64 size);
+void asgiSetIndexBuffer (ASGI_GPURenderEncoderBase* pEncoder,
+	ASGI_GPUBuffer* pBuffer, ASGI_GPUIndexFormat indexFormat, 
+	ASGI_GPUSize64 offset, ASGI_GPUSize64 size
+);
 
-void setVertexBuffer (GPURenderEncoderBase* encoder,
-	GPUIndex32 slot, GPUBuffer buffer, GPUSize64 offset, GPUSize64 size);
+void asgiSetVertexBuffer (ASGI_GPURenderEncoderBase* pEncoder,
+	ASGI_GPUIndex32 slot, ASGI_GPUBuffer* pBuffer, 
+	ASGI_GPUSize64 offset, ASGI_GPUSize64 size
+);
 
-void draw (GPURenderEncoderBase* encoder,
-	GPUSize32 vertexCount, GPUSize32 instanceCount,
-	GPUSize32 firstVertex, GPUSize32 firstInstance);
+void asgiDraw (ASGI_GPURenderEncoderBase* pEncoder,
+	ASGI_GPUSize32 vertexCount, ASGI_GPUSize32 instanceCount,
+	ASGI_GPUSize32 firstVertex, ASGI_GPUSize32 firstInstance
+);
 
-void drawIndexed (GPURenderEncoderBase* encoder,
-	GPUSize32 indexCount, GPUSize32 instanceCount,
-	GPUSize32 firstIndex,
-	GPUSignedOffset32 baseVertex,
-	GPUSize32 firstInstance);
+void asgiDrawIndexed (ASGI_GPURenderEncoderBase* pEncoder,
+	ASGI_GPUSize32 indexCount, ASGI_GPUSize32 instanceCount,
+	ASGI_GPUSize32 firstIndex,
+	ASGI_GPUSignedOffset32 baseVertex,
+	ASGI_GPUSize32 firstInstance
+);
 
-void drawIndirect (GPURenderEncoderBase* encoder, GPUBuffer indirectBuffer, GPUSize64 indirectOffset);
-void drawIndexedIndirect (GPURenderEncoderBase* encoder, GPUBuffer indirectBuffer, GPUSize64 indirectOffset);
+void asgiDrawIndirect (ASGI_GPURenderEncoderBase* pEncoder, ASGI_GPUBuffer* pIndirectBuffer, ASGI_GPUSize64 indirectOffset);
+
+void asgiDrawIndexedIndirect (ASGI_GPURenderEncoderBase* pEncoder, ASGI_GPUBuffer* pIndirectBuffer, ASGI_GPUSize64 indirectOffset);

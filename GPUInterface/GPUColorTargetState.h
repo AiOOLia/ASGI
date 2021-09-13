@@ -4,8 +4,8 @@
 #include "GPUBlendState.h"
 #include "GPUColorWrite.h"
 
-struct GPUColorTargetState {
-	GPUTextureFormat format;
-	GPUBlendState blend;
-	GPUColorWriteFlags writeMask;  // GPUColorWrite.ALL
+struct ASGI_GPUColorTargetState {
+	ASGI_GPUTextureFormat format;
+	ASGI_GPUBlendState blend;
+	ASGI_GPUColorWriteFlags writeMask;  // ASGI_GPUColorWrite.ALL
 };

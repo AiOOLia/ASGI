@@ -1,6 +1,6 @@
 #pragma once
 
-#include "GPUDefine.h"
+#include "GPUDefines.h"
 #include "GPUShaderStage.h"
 #include "GPUBufferBindingLayout.h"
 #include "GPUSamplerBindingLayout.h"
@@ -8,13 +8,13 @@
 #include "GPUStorageTextureBindingLayout.h"
 #include "GPUExternalTextureBindingLayout.h"
 
-struct GPUBindGroupLayoutEntry {
-	GPUIndex32 binding;
-	GPUShaderStageFlags visibility;
+struct ASGI_GPUBindGroupLayoutEntry {
+	ASGI_GPUIndex32 binding;
+	ASGI_GPUShaderStageFlags visibility;
 
-	GPUBufferBindingLayout buffer;
-	GPUSamplerBindingLayout sampler;
-	GPUTextureBindingLayout texture;
-	GPUStorageTextureBindingLayout storageTexture;
-	GPUExternalTextureBindingLayout externalTexture;
+	ASGI_GPUBufferBindingLayout buffer;
+	ASGI_GPUSamplerBindingLayout sampler;
+	ASGI_GPUTextureBindingLayout texture;
+	ASGI_GPUStorageTextureBindingLayout storageTexture;
+	ASGI_GPUExternalTextureBindingLayout externalTexture;
 };

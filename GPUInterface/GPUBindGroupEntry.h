@@ -6,10 +6,10 @@
 #include "GPUBufferBinding.h"
 #include "GPUExternalTexture.h"
 
-struct GPUBindGroupEntry {
-	GPUIndex32 binding;
-	GPUSampler* resource_sampler;
-	GPUTextureView* resource_texture_view;
-	GPUBufferBinding* resource_buffer_binding;
-	GPUExternalTexture* resource_external_texture;
+struct ASGI_GPUBindGroupEntry {
+	ASGI_GPUIndex32 binding;
+	ASGI_GPUSampler* resource_sampler;
+	ASGI_GPUTextureView* resource_texture_view;
+	ASGI_GPUBufferBinding* resource_buffer_binding;
+	ASGI_GPUExternalTexture* resource_external_texture;
 };

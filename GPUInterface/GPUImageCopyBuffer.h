@@ -3,9 +3,9 @@
 #include "GPUDefines.h"
 #include "GPUBuffer.h"
 
-struct GPUImageCopyBuffer {
-	GPUSize64 offset = 0;
-	GPUSize32 bytesPerRow;
-	GPUSize32 rowsPerImage;
-	GPUBuffer buffer;
+struct ASGI_GPUImageCopyBuffer {
+	ASGI_GPUSize64 offset = 0;
+	ASGI_GPUSize32 bytesPerRow;
+	ASGI_GPUSize32 rowsPerImage;
+	ASGI_GPUBuffer buffer;
 };

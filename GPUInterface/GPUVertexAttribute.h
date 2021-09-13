@@ -3,8 +3,8 @@
 #include "GPUVertexFormat.h"
 #include "GPUDefines.h"
 
-struct GPUVertexAttribute {
-	GPUVertexFormat format;
-	GPUSize64 offset;
-	GPUIndex32 shaderLocation;
+struct ASGI_GPUVertexAttribute {
+	ASGI_GPUVertexFormat format;
+	ASGI_GPUSize64 offset;
+	ASGI_GPUIndex32 shaderLocation;
 };

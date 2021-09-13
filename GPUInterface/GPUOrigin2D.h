@@ -2,7 +2,7 @@
 
 #include "GPUDefines.h"
 
-struct GPUOrigin2D {
-	GPUIntegerCoordinate x;
-	GPUIntegerCoordinate y;
+struct ASGI_GPUOrigin2D {
+	ASGI_GPUIntegerCoordinate x;
+	ASGI_GPUIntegerCoordinate y;
 };

@@ -2,9 +2,9 @@
 #include "GPUCompareFunction.h"
 #include "GPUStencilOperation.h"
 
-struct GPUStencilFaceState {
-	GPUCompareFunction compare;
-	GPUStencilOperation failOp;
-	GPUStencilOperation depthFailOp;
-	GPUStencilOperation passOp;
+struct ASGI_GPUStencilFaceState {
+	ASGI_GPUCompareFunction compare;
+	ASGI_GPUStencilOperation failOp;
+	ASGI_GPUStencilOperation depthFailOp;
+	ASGI_GPUStencilOperation passOp;
 };

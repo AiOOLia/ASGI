@@ -1,7 +1,10 @@
 ﻿#pragma once
 
-#include "GPUInterface/GPURequestAdapterOptions.h"
-#include "GPUInterface/GPUAdapter.h"
+
+#include "GPUInterface\GPU.h"
+
+
+ASGI_GPU* asgiCreateGPUInstance();
 
 //
-GPUAdapter* requestAdapter(GPURequestAdapterOptions* options);
+

@@ -3,12 +3,12 @@
 #include "GPUTextureFormat.h"
 #include "GPUDefines.h"
 
-struct GPURenderBundleEncoderDescriptor {
+struct ASGI_GPURenderBundleEncoderDescriptor {
 	const char* label;
 	int numColorFormat;
-	GPUTextureFormat* colorFormats;
-	GPUTextureFormat depthStencilFormat;
-	GPUSize32 sampleCount;
+	ASGI_GPUTextureFormat* colorFormats;
+	ASGI_GPUTextureFormat depthStencilFormat;
+	ASGI_GPUSize32 sampleCount;
 	bool depthReadOnly;
 	bool stencilReadOnly;
 };

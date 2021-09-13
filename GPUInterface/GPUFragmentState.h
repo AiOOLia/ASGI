@@ -4,12 +4,12 @@
 #include "GPUColorTargetState.h"
 #include "GPUDefines.h"
 
-struct GPUFragmentState {
-	GPUShaderModule* module;
+struct ASGI_GPUFragmentState {
+	ASGI_GPUShaderModule* module;
 	const char* entryPoint;
 	int numConstant;
 	const char* const* names;
-	GPUPipelineConstantValue* values;
+	ASGI_GPUPipelineConstantValue* values;
 	int numTarget;
-	GPUColorTargetState* targets;
+	ASGI_GPUColorTargetState* targets;
 };

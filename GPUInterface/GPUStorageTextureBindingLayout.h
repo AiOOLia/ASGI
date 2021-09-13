@@ -1,7 +1,11 @@
 #pragma once
 
-struct GPUStorageTextureBindingLayout {
-	GPUStorageTextureAccess access;
-	GPUTextureFormat format;
-	GPUTextureViewDimension viewDimension;
+#include "GPUStorageTextureAccess.h"
+#include "GPUTextureFormat.h"
+#include "GPUTextureViewDimension.h"
+
+struct ASGI_GPUStorageTextureBindingLayout {
+	ASGI_GPUStorageTextureAccess access;
+	ASGI_GPUTextureFormat format;
+	ASGI_GPUTextureViewDimension viewDimension;
 };

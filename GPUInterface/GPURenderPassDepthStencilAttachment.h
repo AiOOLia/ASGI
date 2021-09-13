@@ -5,16 +5,16 @@
 #include "GPUStoreOp.h"
 #include "GPUDefines.h"
 
-struct GPURenderPassDepthStencilAttachment {
-	GPUTextureView view;
+struct ASGI_GPURenderPassDepthStencilAttachment {
+	ASGI_GPUTextureView view;
 
-	GPULoadOp depthLoadOp;
+	ASGI_GPULoadOp depthLoadOp;
 	float depthLoadValue;
-	GPUStoreOp depthStoreOp;
+	ASGI_GPUStoreOp depthStoreOp;
 	bool depthReadOnly;
 
-	GPULoadOp stencilLoadOp;
-	GPUStencilValue stencilLoadValue;
-	GPUStoreOp stencilStoreOp;
+	ASGI_GPULoadOp stencilLoadOp;
+	ASGI_GPUStencilValue stencilLoadValue;
+	ASGI_GPUStoreOp stencilStoreOp;
 	bool stencilReadOnly;
 };

@@ -2,8 +2,8 @@
 
 #include "GPUPredefinedColorSpace.h"
 
-struct GPUExternalTextureDescriptor {
+struct ASGI_GPUExternalTextureDescriptor {
 	const char* label;
 	void* source;
-	GPUPredefinedColorSpace colorSpace;
+	ASGI_GPUPredefinedColorSpace colorSpace;
 };

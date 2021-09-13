@@ -1,6 +1,6 @@
 #pragma once
 
-struct GPUSupportedLimits {
+struct ASGI_GPUSupportedLimits {
 	unsigned long maxTextureDimension1D;
 	unsigned long maxTextureDimension2D;
 	unsigned long maxTextureDimension3D;

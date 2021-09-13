@@ -2,8 +2,8 @@
 
 #include "GPUDefines.h"
 
-struct GPUOrigin3D {
-	GPUIntegerCoordinate x;
-	GPUIntegerCoordinate y;
-	GPUIntegerCoordinate z;
+struct ASGI_GPUOrigin3D {
+	ASGI_GPUIntegerCoordinate x;
+	ASGI_GPUIntegerCoordinate y;
+	ASGI_GPUIntegerCoordinate z;
 };

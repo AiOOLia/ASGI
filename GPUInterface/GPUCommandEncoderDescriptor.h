@@ -1,6 +1,6 @@
 #pragma once
 
 
-struct GPUCommandEncoderDescriptor {
+struct ASGI_GPUCommandEncoderDescriptor {
 	bool measureExecutionTime;
 };

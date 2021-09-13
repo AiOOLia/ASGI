@@ -1,29 +1,44 @@
 #pragma once
 
 #include "GPUDefines.h"
+#include "GPURenderEncoderBase.h"
+#include "GPUProgrammablePassEncoder.h"
 #include "GPURenderBundle.h"
+#include "GPUQuerySet.h"
+#include "GPUColor.h"
 
-struct GPURenderPassEncoder {
+
+struct ASGI_GPURenderPassEncoder {
 	const char* label;
+	ASGI_GPUProgrammablePassEncoder* programmablePassEncoder;
+	ASGI_GPURenderEncoderBase* renderEncoder;
 };
 
-void setScissorRect(GPURenderPassEncoder* encoder, GPUIntegerCoordinate x, GPUIntegerCoordinate y,
-	GPUIntegerCoordinate width, GPUIntegerCoordinate height);
+void asgiSetScissorRect(ASGI_GPURenderPassEncoder* pEncoder, 
+	ASGI_GPUIntegerCoordinate x, ASGI_GPUIntegerCoordinate y,
+	ASGI_GPUIntegerCoordinate width, ASGI_GPUIntegerCoordinate height
+);
 
-void setViewport(GPURenderPassEncoder* encoder, float x, float y,
+void asgiSetViewport(ASGI_GPURenderPassEncoder* pEncoder, 
+	float x, float y,
 	float width, float height,
-	float minDepth, float maxDepth);
+	float minDepth, float maxDepth
+);
 
-void setBlendConstant(GPURenderPassEncoder* encoder, GPUColor color);
-void setStencilReference(GPURenderPassEncoder* encoder, GPUStencilValue reference);
+void asgiSetBlendConstant(ASGI_GPURenderPassEncoder* pEncoder, ASGI_GPUColor* pColor);
 
-void beginOcclusionQuery(GPURenderPassEncoder* encoder, GPUSize32 queryIndex);
-void endOcclusionQuery(GPURenderPassEncoder* encoder);
+void asgiSetStencilReference(ASGI_GPURenderPassEncoder* pEncoder, ASGI_GPUStencilValue reference);
 
-void beginPipelineStatisticsQuery(GPURenderPassEncoder* encoder, GPUQuerySet querySet, GPUSize32 queryIndex);
-void endPipelineStatisticsQuery(GPURenderPassEncoder* encoder);
+void asgiBeginOcclusionQuery(ASGI_GPURenderPassEncoder* pEncoder, ASGI_GPUSize32 queryIndex);
 
-void writeTimestamp(GPURenderPassEncoder* encoder, GPUQuerySet querySet, GPUSize32 queryIndex);
+void asgiEndOcclusionQuery(ASGI_GPURenderPassEncoder* pEncoder);
 
-void executeBundles(GPURenderPassEncoder* encoder, int numBundle, GPURenderBundle* bundles);
-void endRenderPass(GPURenderPassEncoder* encoder);
+void asgiBeginPipelineStatisticsQuery(ASGI_GPURenderPassEncoder* pEncoder, ASGI_GPUQuerySet* pQuerySet, ASGI_GPUSize32 queryIndex);
+
+void asgiEndPipelineStatisticsQuery(ASGI_GPURenderPassEncoder* pEncoder);
+
+void asgiWriteTimestampRPE(ASGI_GPURenderPassEncoder* pEncoder, ASGI_GPUQuerySet* pQuerySet, ASGI_GPUSize32 queryIndex);
+
+void asgiExecuteBundles(ASGI_GPURenderPassEncoder* pEncoder, int numBundle, ASGI_GPURenderBundle* bundles);
+
+void asgiEndRenderPass(ASGI_GPURenderPassEncoder* pEncoder);

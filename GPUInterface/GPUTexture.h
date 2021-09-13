@@ -1,10 +1,11 @@
 #pragma once
 
-struct GPUTextureView;
+#include "GPUTextureView.h"
+#include "GPUTextureViewDescriptor.h"
 
-struct GPUTexture {
+struct ASGI_GPUTexture {
 	const char* label;
 };
 
-GPUTextureView* createView(GPUTexture* texture, GPUTextureViewDescriptor* descriptor);
-void destoryTexture(GPUTexture* texture);
+ASGI_GPUTextureView* asgiCreateView(ASGI_GPUTexture* pTexture, ASGI_GPUTextureViewDescriptor* pDescriptor);
+void asgiDestoryGPUTexture(ASGI_GPUTexture* pTexture);

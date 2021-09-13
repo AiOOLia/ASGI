@@ -4,10 +4,10 @@
 #include "GPURenderPassDepthStencilAttachment.h"
 #include "GPUQuerySet.h"
 
-struct GPURenderPassDescriptor {
+struct ASGI_GPURenderPassDescriptor {
 	const char* label;
 	int numColorAttachments;
-	GPURenderPassColorAttachment* colorAttachments;
-	GPURenderPassDepthStencilAttachment depthStencilAttachment;
-	GPUQuerySet occlusionQuerySet;
+	ASGI_GPURenderPassColorAttachment* colorAttachments;
+	ASGI_GPURenderPassDepthStencilAttachment depthStencilAttachment;
+	ASGI_GPUQuerySet occlusionQuerySet;
 };

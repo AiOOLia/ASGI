@@ -4,9 +4,9 @@
 #include "GPUVertexStepMode.h"
 #include "GPUVertexAttribute.h"
 
-struct GPUVertexBufferLayout {
-	GPUSize64 arrayStride;
-	GPUVertexStepMode stepMode;
+struct ASGI_GPUVertexBufferLayout {
+	ASGI_GPUSize64 arrayStride;
+	ASGI_GPUVertexStepMode stepMode;
 	int numAttribute;
-	GPUVertexAttribute* attributes;
+	ASGI_GPUVertexAttribute* attributes;
 };

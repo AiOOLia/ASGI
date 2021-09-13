@@ -1,10 +1,10 @@
 #pragma once
 
-enum GPUTextureViewDimension {
-	D1,
-	D2,
-	D2_array,
-	Cube,
-	CubeArray,
-	D3
+enum ASGI_GPUTextureViewDimension {
+	ASGI_TEX_VIEW_DIMENSION_D1,
+	ASGI_TEX_VIEW_DIMENSION_D2,
+	ASGI_TEX_VIEW_DIMENSION_D2_array,
+	ASGI_TEX_VIEW_DIMENSION_Cube,
+	ASGI_TEX_VIEW_DIMENSION_CubeArray,
+	ASGI_TEX_VIEW_DIMENSION_D3
 };

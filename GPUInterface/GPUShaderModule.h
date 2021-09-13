@@ -3,8 +3,8 @@
 
 #include "GPUCompilationInfo.h"
 
-struct GPUShaderModule {
+struct ASGI_GPUShaderModule {
 	const char* label;
 };
 
-GPUCompilationInfo* compilationInfo(GPUShaderModule* shader_module);
+ASGI_GPUCompilationInfo* asgiCompilationInfo(ASGI_GPUShaderModule* pShaderModule);

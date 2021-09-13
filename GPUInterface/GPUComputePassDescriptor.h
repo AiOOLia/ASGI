@@ -1,6 +1,6 @@
 #pragma once
 
 
-struct GPUComputePassDescriptor {
+struct ASGI_GPUComputePassDescriptor {
 	const char* label;
 };

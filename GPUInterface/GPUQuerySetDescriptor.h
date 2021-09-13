@@ -1,9 +1,12 @@
 #pragma once
 
-struct GPUQuerySetDescriptor {
+#include "GPUQueryType.h"
+#include "GPUPipelineStatisticType.h"
+
+struct ASGI_GPUQuerySetDescriptor {
 	const char* label;
-	GPUQueryType type;
-	GPUSize32 count;
+	ASGI_GPUQueryType type;
+	ASGI_GPUSize32 count;
 	int numPipelineStatistic;
-	GPUPipelineStatisticType* pipelineStatistics;
+	ASGI_GPUPipelineStatisticType* pipelineStatistics;
 };

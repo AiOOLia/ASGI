@@ -1,5 +1,5 @@
 #pragma once
 
-struct GPUBindGroup {
+struct ASGI_GPUBindGroup {
 	const char* label;
 };

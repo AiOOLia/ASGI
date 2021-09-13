@@ -1,7 +1,10 @@
 #pragma once
 
-struct GPUBufferBindingLayout {
-	GPUBufferBindingType type;
+#include "GPUDefines.h"
+#include "GPUBufferBindingType.h"
+
+struct ASGI_GPUBufferBindingLayout {
+	ASGI_GPUBufferBindingType type;
 	bool hasDynamicOffset = false;
-	GPUSize64 minBindingSize = 0;
+	ASGI_GPUSize64 minBindingSize = 0;
 };

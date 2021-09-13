@@ -2,7 +2,7 @@
 
 #include "GPUBindGroupLayout.h"
 
-struct GPUPipelineBase {
+struct ASGI_GPUPipelineBase {
 };
 
-GPUBindGroupLayout getBindGroupLayout(GPUPipelineBase* pipline, unsigned long index);
+ASGI_GPUBindGroupLayout* asgiGetBindGroupLayout(ASGI_GPUPipelineBase* pPipline, unsigned long index);

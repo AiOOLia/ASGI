@@ -1,5 +1,7 @@
 #pragma once
 
-struct GPUSamplerBindingLayout {
-	GPUSamplerBindingType type;
+#include "GPUSamplerBindingType.h"
+
+struct ASGI_GPUSamplerBindingLayout {
+	ASGI_GPUSamplerBindingType type;
 };

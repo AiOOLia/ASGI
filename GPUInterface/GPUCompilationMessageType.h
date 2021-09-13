@@ -1,7 +1,7 @@
 #pragma once
 
-enum GPUCompilationMessageType {
-	Error,
-	Warning,
-	Info
+enum ASGI_GPUCompilationMessageType {
+	ASGI_COMPIL_MESSAGE_TYPE_Error,
+	ASGI_COMPIL_MESSAGE_TYPE_Warning,
+	ASGI_COMPIL_MESSAGE_TYPE_Info
 };

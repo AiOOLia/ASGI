@@ -2,12 +2,14 @@
 
 #include "GPUDeviceDescriptor.h"
 #include "GPUDevice.h"
+#include "GPUSupportedFeatures.h"
+#include "GPUSupportedLimits.h"
 
-struct GPUAdapter {
+struct ASGI_GPUAdapter {
 	const char* name;
-	GPUSupportedFeatures features;
-	GPUSupportedLimits limits;
+	ASGI_GPUSupportedFeatures features;
+	ASGI_GPUSupportedLimits limits;
 	bool isFallbackAdapter;
 };
 
-GPUDevice* requestDevice (GPUAdapter* pAdapter, GPUDeviceDescriptor* descriptor);
+ASGI_GPUDevice* asgiRequestDevice (ASGI_GPUAdapter* pAdapter, ASGI_GPUDeviceDescriptor* pDescriptor);

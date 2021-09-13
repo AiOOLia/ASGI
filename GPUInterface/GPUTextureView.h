@@ -1,5 +1,5 @@
 #pragma once
 
-struct GPUTextureView {
+struct ASGI_GPUTextureView {
 	const char* label;
 };

@@ -1,5 +1,5 @@
 #pragma once
 
-struct GPUSampler {
+struct ASGI_GPUSampler {
 	const char* label;
 };

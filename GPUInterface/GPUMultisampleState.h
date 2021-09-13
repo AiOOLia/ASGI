@@ -2,8 +2,8 @@
 
 #include "GPUDefines.h"
 
-struct GPUMultisampleState {
-	GPUSize32 count;
-	GPUSampleMask mask;
+struct ASGI_GPUMultisampleState {
+	ASGI_GPUSize32 count;
+	ASGI_GPUSampleMask mask;
 	bool alphaToCoverageEnabled;
 };

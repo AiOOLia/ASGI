@@ -7,12 +7,12 @@
 #include "GPUMultisampleState.h"
 #include "GPUFragmentState.h"
 
-struct GPURenderPipelineDescriptor {
+struct ASGI_GPURenderPipelineDescriptor {
 	const char* label;
-	GPUPipelineLayout* layout;
-	GPUVertexState vertex;
-	GPUPrimitiveState primitive;
-	GPUDepthStencilState depthStencil;
-	GPUMultisampleState multisample;
-	GPUFragmentState fragment;
+	ASGI_GPUPipelineLayout* layout;
+	ASGI_GPUVertexState vertex;
+	ASGI_GPUPrimitiveState primitive;
+	ASGI_GPUDepthStencilState depthStencil;
+	ASGI_GPUMultisampleState multisample;
+	ASGI_GPUFragmentState fragment;
 };

@@ -1,6 +1,6 @@
 #pragma once
 
-struct GPUColor {
+struct ASGI_GPUColor {
 	double r;
 	double g;
 	double b;

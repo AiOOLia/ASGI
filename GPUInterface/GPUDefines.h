@@ -1,16 +1,16 @@
 #pragma once
 
-typedef unsigned long GPUBufferDynamicOffset;
-typedef unsigned long GPUStencilValue;
-typedef unsigned long GPUSampleMask;
-typedef long GPUDepthBias;
+typedef unsigned long ASGI_GPUBufferDynamicOffset;
+typedef unsigned long ASGI_GPUStencilValue;
+typedef unsigned long ASGI_GPUSampleMask;
+typedef long ASGI_GPUDepthBias;
 
-typedef unsigned long long GPUSize64;
-typedef unsigned long GPUIntegerCoordinate;
-typedef unsigned long GPUIndex32;
-typedef unsigned long GPUSize32;
-typedef long GPUSignedOffset32;
+typedef unsigned long long ASGI_GPUSize64;
+typedef unsigned long ASGI_GPUIntegerCoordinate;
+typedef unsigned long ASGI_GPUIndex32;
+typedef unsigned long ASGI_GPUSize32;
+typedef long ASGI_GPUSignedOffset32;
 
-typedef unsigned long GPUFlagsConstant;
+typedef unsigned long ASGI_GPUFlagsConstant;
 
-typedef double GPUPipelineConstantValue;
+typedef double ASGI_GPUPipelineConstantValue;

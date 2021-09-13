@@ -2,7 +2,7 @@
 
 #include "GPUBindGroupLayout.h"
 
-struct GPUPipelineLayoutDescriptor {
+struct ASGI_GPUPipelineLayoutDescriptor {
 	int numLayout;
-	GPUBindGroupLayout* bindGroupLayouts;
+	ASGI_GPUBindGroupLayout* bindGroupLayouts;
 };
