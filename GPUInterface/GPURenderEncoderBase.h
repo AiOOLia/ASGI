@@ -8,7 +8,7 @@
 struct ASGI_GPURenderEncoderBase {
 };
 
-void asgiSetPipeline (ASGI_GPURenderEncoderBase* pEncoder, ASGI_GPURenderPipeline pipeline);
+void asgiSetRenderPipeline (ASGI_GPURenderEncoderBase* pEncoder, ASGI_GPURenderPipeline* pPipeline);
 
 void asgiSetIndexBuffer (ASGI_GPURenderEncoderBase* pEncoder,
 	ASGI_GPUBuffer* pBuffer, ASGI_GPUIndexFormat indexFormat, 

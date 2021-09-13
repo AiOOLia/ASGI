@@ -50,7 +50,7 @@ ASGI_GPUExternalTexture* asgiImportExternalTexture(ASGI_GPUDevice* pDevice, ASGI
 
 ASGI_GPUBindGroupLayout* asgiCreateBindGroupLayout(ASGI_GPUDevice* pDevice, ASGI_GPUBindGroupLayoutDescriptor* pDescriptor);
 
-ASGI_GPUPipelineLayout* asgiCreatePipelineLayout(ASGI_GPUDevice* pDevice, ASGI_GPUPipelineLayoutDescriptor* descriptor);
+ASGI_GPUPipelineLayout* asgiCreatePipelineLayout(ASGI_GPUDevice* pDevice, ASGI_GPUPipelineLayoutDescriptor* pDescriptor);
 
 ASGI_GPUBindGroup* asgiCreateBindGroup(ASGI_GPUDevice* pDevice, ASGI_GPUBindGroupDescriptor* pDescriptor);
 
@@ -68,4 +68,4 @@ ASGI_GPUCommandEncoder* asgiCreateCommandEncoder(ASGI_GPUDevice* pDevice, ASGI_G
 
 ASGI_GPURenderBundleEncoder* asgiCreateRenderBundleEncoder(ASGI_GPUDevice* pDevice, ASGI_GPURenderBundleEncoderDescriptor* pDescriptor);
 
-ASGI_GPUQuerySet* asgiCreateQuerySet(ASGI_GPUDevice* pDevice, ASGI_GPUQuerySetDescriptor* descriptor);
+ASGI_GPUQuerySet* asgiCreateQuerySet(ASGI_GPUDevice* pDevice, ASGI_GPUQuerySetDescriptor* pDescriptor);

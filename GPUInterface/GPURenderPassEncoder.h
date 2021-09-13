@@ -33,9 +33,9 @@ void asgiBeginOcclusionQuery(ASGI_GPURenderPassEncoder* pEncoder, ASGI_GPUSize32
 
 void asgiEndOcclusionQuery(ASGI_GPURenderPassEncoder* pEncoder);
 
-void asgiBeginPipelineStatisticsQuery(ASGI_GPURenderPassEncoder* pEncoder, ASGI_GPUQuerySet* pQuerySet, ASGI_GPUSize32 queryIndex);
+void asgiBeginRenderPipelineStatisticsQuery(ASGI_GPURenderPassEncoder* pEncoder, ASGI_GPUQuerySet* pQuerySet, ASGI_GPUSize32 queryIndex);
 
-void asgiEndPipelineStatisticsQuery(ASGI_GPURenderPassEncoder* pEncoder);
+void asgiEndRenderPipelineStatisticsQuery(ASGI_GPURenderPassEncoder* pEncoder);
 
 void asgiWriteTimestampRPE(ASGI_GPURenderPassEncoder* pEncoder, ASGI_GPUQuerySet* pQuerySet, ASGI_GPUSize32 queryIndex);
 

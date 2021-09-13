@@ -25,11 +25,13 @@ endfunction()
 add_library (ASGI SHARED  "")
 
 asgi_glob_files(ASGI_GPU_INTERFACE_HEADERS GPUInterface/*.h GPUInterface/*.hpp)
+asgi_glob_files(ASGI_HEADERS ./*.h ./*.hpp)
 asgi_glob_files(ASGI_SRCS ./*.cpp)
 
 target_sources(
     ASGI
     PUBLIC
         ${ASGI_GPU_INTERFACE_HEADERS}
+        ${ASGI_HEADERS}
         ${ASGI_SRCS}
 )
