@@ -1,6 +1,5 @@
 ﻿#pragma once
 
-
 #include "GPUInterface\GPU.h"
 
 enum ASGI_GPU_INTERFACE_TYPE
@@ -10,6 +9,4 @@ enum ASGI_GPU_INTERFACE_TYPE
 };
 
 ASGI_GPU* asgiCreateGPUInstance(ASGI_GPU_INTERFACE_TYPE interfaceType);
-
-//
 

@@ -1,6 +1,7 @@
 #pragma once
 
 #include "../GPUInterface/GPU.h"
+#include "DirectX12_GPUAdapter.h"
 
 struct DX12_GPU {
 	struct ASGI_GPU gpu;

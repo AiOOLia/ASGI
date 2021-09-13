@@ -129,7 +129,7 @@ ASGI_GPUSampler* asgiCreateSampler(
 	return sGPU.ASGI_FUNC_CreateSampler(pDevice, pDescriptor);
 }
 
-ASGI_GPUExternalTexture* asgiImportExternalTexture(
+ASGI_GPUExternalTexture* asgiImportExternalTexture (
 	ASGI_GPUDevice* pDevice,
 	ASGI_GPUExternalTextureDescriptor* pDescriptor)
 {
@@ -666,6 +666,11 @@ void asgiDestoryGPUQuerySet(ASGI_GPUQuerySet* pQuerySet)
 #include <malloc.h>
 #include "DirectX12\DirectX12_GPU.h"
 
+void initDx12GPU() {
+	sGPU.ASGI_FUNC_RequestAdapter = dx12RequestAdapter;
+	sGPU.ASGI_FUNC_RequestDevice = dx12RequestDevice;
+}
+
 ASGI_GPU* asgiCreateGPUInstance(ASGI_GPU_INTERFACE_TYPE interfaceType)
 {
 	switch (interfaceType)
@@ -673,6 +678,7 @@ ASGI_GPU* asgiCreateGPUInstance(ASGI_GPU_INTERFACE_TYPE interfaceType)
 	case ASGI_GPU_INTERFACE_TYPE_VULKAN:
 		break;
 	case ASGI_GPU_INTERFACE_TYPE_DIRECTX12:
+		initDx12GPU();
 		return (ASGI_GPU*)malloc(sizeof(DX12_GPU));
 		break;
 	default:

@@ -1,5 +1,4 @@
 #include "DirectX12_GPU.h"
-#include "DirectX12_GPUAdapter.h"
 #include <malloc.h>
 
 ASGI_GPUAdapter* dx12RequestAdapter(ASGI_GPU* pGpu, ASGI_GPURequestAdapterOptions* pOptions)
