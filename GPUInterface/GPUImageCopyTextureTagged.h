@@ -1,5 +1,6 @@
 #pragma once
 
+#include "GPUDefines.h"
 #include "GPUTexture.h"
 #include "GPUOrigin3D.h"
 #include "GPUTextureAspect.h"
@@ -14,5 +15,5 @@ struct ASGI_GPUImageCopyTextureTagged
 	ASGI_GPUTextureAspect aspect;
 	//
     ASGI_GPUPredefinedColorSpace colorSpace;
-    bool premultipliedAlpha = false;
+    BOOL premultipliedAlpha;
 };

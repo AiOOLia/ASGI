@@ -1,10 +1,12 @@
 #pragma once
 
+#include "GPUDefines.h"
+
 struct ASGI_GPUSupportedFeatures {
-	bool depth_clamping;
-	bool depth24unorm_stencil8;
-	bool depth32float_stencil8;
-	bool pipeline_statistics_query;
-	bool texture_compression_bc;
-	bool timestamp_query;
+	BOOL depth_clamping;
+	BOOL depth24unorm_stencil8;
+	BOOL depth32float_stencil8;
+	BOOL pipeline_statistics_query;
+	BOOL texture_compression_bc;
+	BOOL timestamp_query;
 };

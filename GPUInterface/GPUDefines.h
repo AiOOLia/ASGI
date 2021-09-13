@@ -1,5 +1,9 @@
 #pragma once
 
+typedef unsigned char BOOL;
+#define TRUE 1
+#define FALSE 0
+
 typedef unsigned long ASGI_GPUBufferDynamicOffset;
 typedef unsigned long ASGI_GPUStencilValue;
 typedef unsigned long ASGI_GPUSampleMask;

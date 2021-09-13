@@ -5,6 +5,6 @@
 
 struct ASGI_GPUBufferBindingLayout {
 	ASGI_GPUBufferBindingType type;
-	bool hasDynamicOffset = false;
+	BOOL hasDynamicOffset;
 	ASGI_GPUSize64 minBindingSize = 0;
 };

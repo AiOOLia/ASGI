@@ -8,7 +8,7 @@
 struct ASGI_GPUDepthStencilState {
 	ASGI_GPUTextureFormat format;
 
-	bool depthWriteEnabled;
+	BOOL depthWriteEnabled;
 	ASGI_GPUCompareFunction depthCompare;
 
 	ASGI_GPUStencilFaceState stencilFront;

@@ -11,10 +11,10 @@ struct ASGI_GPURenderPassDepthStencilAttachment {
 	ASGI_GPULoadOp depthLoadOp;
 	float depthLoadValue;
 	ASGI_GPUStoreOp depthStoreOp;
-	bool depthReadOnly;
+	BOOL depthReadOnly;
 
 	ASGI_GPULoadOp stencilLoadOp;
 	ASGI_GPUStencilValue stencilLoadValue;
 	ASGI_GPUStoreOp stencilStoreOp;
-	bool stencilReadOnly;
+	BOOL stencilReadOnly;
 };

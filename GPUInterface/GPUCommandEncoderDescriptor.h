@@ -1,6 +1,7 @@
 #pragma once
 
+#include "GPUDefines.h"
 
 struct ASGI_GPUCommandEncoderDescriptor {
-	bool measureExecutionTime;
+	BOOL measureExecutionTime;
 };

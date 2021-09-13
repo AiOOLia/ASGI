@@ -9,6 +9,6 @@ struct ASGI_GPURenderBundleEncoderDescriptor {
 	ASGI_GPUTextureFormat* colorFormats;
 	ASGI_GPUTextureFormat depthStencilFormat;
 	ASGI_GPUSize32 sampleCount;
-	bool depthReadOnly;
-	bool stencilReadOnly;
+	BOOL depthReadOnly;
+	BOOL stencilReadOnly;
 };

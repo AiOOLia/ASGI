@@ -9,7 +9,7 @@ struct ASGI_GPUAdapter {
 	const char* name;
 	ASGI_GPUSupportedFeatures features;
 	ASGI_GPUSupportedLimits limits;
-	bool isFallbackAdapter;
+	BOOL isFallbackAdapter;
 };
 
 ASGI_GPUDevice* asgiRequestDevice (ASGI_GPUAdapter* pAdapter, ASGI_GPUDeviceDescriptor* pDescriptor);

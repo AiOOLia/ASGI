@@ -6,5 +6,5 @@
 struct ASGI_GPUTextureBindingLayout {
 	ASGI_GPUTextureSampleType sampleType;
 	ASGI_GPUTextureViewDimension viewDimension;
-	bool multisampled;
+	BOOL multisampled;
 };
