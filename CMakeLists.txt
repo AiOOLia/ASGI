@@ -28,10 +28,14 @@ asgi_glob_files(ASGI_GPU_INTERFACE_HEADERS GPUInterface/*.h GPUInterface/*.hpp)
 asgi_glob_files(ASGI_HEADERS ./*.h ./*.hpp)
 asgi_glob_files(ASGI_SRCS ./*.cpp)
 
+asgi_glob_files(ASGI_DIRECTX12 DirectX12/*.h DirectX12/*.hpp DirectX12/*.cpp)
+
 target_sources(
     ASGI
     PUBLIC
         ${ASGI_GPU_INTERFACE_HEADERS}
         ${ASGI_HEADERS}
         ${ASGI_SRCS}
+    PRIVATE
+        ${ASGI_DIRECTX12}
 )
