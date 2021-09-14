@@ -1,5 +1,6 @@
 #pragma once
 
+#include "../Export.h"
 #include "GPURenderBundle.h"
 #include "GPURenderBundleDescriptor.h"
 #include "GPUProgrammablePassEncoder.h"
@@ -11,4 +12,4 @@ typedef struct ASGI_GPURenderBundleEncoder {
 	struct ASGI_GPURenderEncoderBase* renderEncoder;
 } ASGI_GPURenderBundleEncoder;
 
-ASGI_GPURenderBundle* asgiFinishRenderBundleEncoder(ASGI_GPURenderBundleEncoder* pEncoder, ASGI_GPURenderBundleDescriptor* pDescriptor);
+ASGI_API ASGI_GPURenderBundle* asgiFinishRenderBundleEncoder(ASGI_GPURenderBundleEncoder* pEncoder, ASGI_GPURenderBundleDescriptor* pDescriptor);

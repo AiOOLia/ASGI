@@ -1,5 +1,6 @@
 #pragma once
 
+#include "../Export.h"
 #include "GPUDeviceDescriptor.h"
 #include "GPUDevice.h"
 #include "GPUSupportedFeatures.h"
@@ -12,4 +13,4 @@ typedef struct ASGI_GPUAdapter {
 	BOOL isFallbackAdapter;
 } ASGI_GPUAdapter;
 
-ASGI_GPUDevice* asgiRequestDevice (ASGI_GPUAdapter* pAdapter, ASGI_GPUDeviceDescriptor* pDescriptor);
+ASGI_API ASGI_GPUDevice* asgiRequestDevice (ASGI_GPUAdapter* pAdapter, ASGI_GPUDeviceDescriptor* pDescriptor);

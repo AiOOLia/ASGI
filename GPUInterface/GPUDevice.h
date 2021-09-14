@@ -1,5 +1,6 @@
 #pragma once
 
+#include "../Export.h"
 #include "GPUSupportedFeatures.h"
 #include "GPUSupportedLimits.h"
 #include "GPUQueue.h"
@@ -39,32 +40,32 @@ typedef struct ASGI_GPUDevice {
 	ASGI_GPUQueue* queue;
 } ASGI_GPUDevice;
 
-ASGI_GPUBuffer* asgiCreateBuffer(ASGI_GPUDevice* pDevice, ASGI_GPUBufferDescriptor* pDescriptor);
+ASGI_API ASGI_GPUBuffer* asgiCreateBuffer(ASGI_GPUDevice* pDevice, ASGI_GPUBufferDescriptor* pDescriptor);
 
-ASGI_GPUTexture* asgiCreateTexture(ASGI_GPUDevice* pDevice, ASGI_GPUTextureDescriptor* pDescriptor);
+ASGI_API ASGI_GPUTexture* asgiCreateTexture(ASGI_GPUDevice* pDevice, ASGI_GPUTextureDescriptor* pDescriptor);
 
-ASGI_GPUSampler* asgiCreateSampler(ASGI_GPUDevice* pDevice, ASGI_GPUSamplerDescriptor* pDescriptor);
+ASGI_API ASGI_GPUSampler* asgiCreateSampler(ASGI_GPUDevice* pDevice, ASGI_GPUSamplerDescriptor* pDescriptor);
 
-ASGI_GPUExternalTexture* asgiImportExternalTexture(ASGI_GPUDevice* pDevice, ASGI_GPUExternalTextureDescriptor* pDescriptor);
+ASGI_API ASGI_GPUExternalTexture* asgiImportExternalTexture(ASGI_GPUDevice* pDevice, ASGI_GPUExternalTextureDescriptor* pDescriptor);
 
-ASGI_GPUBindGroupLayout* asgiCreateBindGroupLayout(ASGI_GPUDevice* pDevice, ASGI_GPUBindGroupLayoutDescriptor* pDescriptor);
+ASGI_API ASGI_GPUBindGroupLayout* asgiCreateBindGroupLayout(ASGI_GPUDevice* pDevice, ASGI_GPUBindGroupLayoutDescriptor* pDescriptor);
 
-ASGI_GPUPipelineLayout* asgiCreatePipelineLayout(ASGI_GPUDevice* pDevice, ASGI_GPUPipelineLayoutDescriptor* pDescriptor);
+ASGI_API ASGI_GPUPipelineLayout* asgiCreatePipelineLayout(ASGI_GPUDevice* pDevice, ASGI_GPUPipelineLayoutDescriptor* pDescriptor);
 
-ASGI_GPUBindGroup* asgiCreateBindGroup(ASGI_GPUDevice* pDevice, ASGI_GPUBindGroupDescriptor* pDescriptor);
+ASGI_API ASGI_GPUBindGroup* asgiCreateBindGroup(ASGI_GPUDevice* pDevice, ASGI_GPUBindGroupDescriptor* pDescriptor);
 
-ASGI_GPUShaderModule* asgiCreateShaderModule(ASGI_GPUDevice* pDevice, ASGI_GPUShaderModuleDescriptor* pDescriptor);
+ASGI_API ASGI_GPUShaderModule* asgiCreateShaderModule(ASGI_GPUDevice* pDevice, ASGI_GPUShaderModuleDescriptor* pDescriptor);
 
-ASGI_GPUComputePipeline* asgiCreateComputePipeline(ASGI_GPUDevice* pDevice, ASGI_GPUComputePipelineDescriptor* pDescriptor);
+ASGI_API ASGI_GPUComputePipeline* asgiCreateComputePipeline(ASGI_GPUDevice* pDevice, ASGI_GPUComputePipelineDescriptor* pDescriptor);
 
-ASGI_GPURenderPipeline* asgiCreateRenderPipeline(ASGI_GPUDevice* pDevice, ASGI_GPURenderPipelineDescriptor* pDescriptor);
+ASGI_API ASGI_GPURenderPipeline* asgiCreateRenderPipeline(ASGI_GPUDevice* pDevice, ASGI_GPURenderPipelineDescriptor* pDescriptor);
 
-void asgiCreateComputePipelineAsync(ASGI_GPUDevice* pDevice, ASGI_GPUComputePipelineDescriptor* pDescriptor, void (*callBack)(ASGI_GPUComputePipeline*));
+ASGI_API void asgiCreateComputePipelineAsync(ASGI_GPUDevice* pDevice, ASGI_GPUComputePipelineDescriptor* pDescriptor, void (*callBack)(ASGI_GPUComputePipeline*));
 
-void asgiCreateRenderPipelineAsync(ASGI_GPUDevice* pDevice, ASGI_GPURenderPipelineDescriptor* pDescriptor, void (*callBack)(ASGI_GPURenderPipeline*));
+ASGI_API void asgiCreateRenderPipelineAsync(ASGI_GPUDevice* pDevice, ASGI_GPURenderPipelineDescriptor* pDescriptor, void (*callBack)(ASGI_GPURenderPipeline*));
 
-ASGI_GPUCommandEncoder* asgiCreateCommandEncoder(ASGI_GPUDevice* pDevice, ASGI_GPUCommandEncoderDescriptor* pDescriptor);
+ASGI_API ASGI_GPUCommandEncoder* asgiCreateCommandEncoder(ASGI_GPUDevice* pDevice, ASGI_GPUCommandEncoderDescriptor* pDescriptor);
 
-ASGI_GPURenderBundleEncoder* asgiCreateRenderBundleEncoder(ASGI_GPUDevice* pDevice, ASGI_GPURenderBundleEncoderDescriptor* pDescriptor);
+ASGI_API ASGI_GPURenderBundleEncoder* asgiCreateRenderBundleEncoder(ASGI_GPUDevice* pDevice, ASGI_GPURenderBundleEncoderDescriptor* pDescriptor);
 
-ASGI_GPUQuerySet* asgiCreateQuerySet(ASGI_GPUDevice* pDevice, ASGI_GPUQuerySetDescriptor* pDescriptor);
+ASGI_API ASGI_GPUQuerySet* asgiCreateQuerySet(ASGI_GPUDevice* pDevice, ASGI_GPUQuerySetDescriptor* pDescriptor);
