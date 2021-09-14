@@ -3,8 +3,8 @@
 #include "GPUDefines.h"
 #include "GPUBufferBindingType.h"
 
-struct ASGI_GPUBufferBindingLayout {
+typedef struct ASGI_GPUBufferBindingLayout {
 	ASGI_GPUBufferBindingType type;
 	BOOL hasDynamicOffset;
-	ASGI_GPUSize64 minBindingSize = 0;
-};
+	ASGI_GPUSize64 minBindingSize;
+} ASGI_GPUBufferBindingLayout;

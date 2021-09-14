@@ -4,7 +4,7 @@
 #include "GPUDefines.h"
 #include "GPUVertexBufferLayout.h"
 
-struct ASGI_GPUVertexState {
+typedef struct ASGI_GPUVertexState {
 	ASGI_GPUShaderModule* module;
 	const char* entryPoint;
 	int numConstant;
@@ -12,4 +12,4 @@ struct ASGI_GPUVertexState {
 	ASGI_GPUPipelineConstantValue* values;
 	int numBuffer;
 	ASGI_GPUVertexBufferLayout* buffers;
-};
+} ASGI_GPUVertexState;

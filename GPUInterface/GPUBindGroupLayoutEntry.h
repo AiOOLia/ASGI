@@ -8,7 +8,7 @@
 #include "GPUStorageTextureBindingLayout.h"
 #include "GPUExternalTextureBindingLayout.h"
 
-struct ASGI_GPUBindGroupLayoutEntry {
+typedef struct ASGI_GPUBindGroupLayoutEntry {
 	ASGI_GPUIndex32 binding;
 	ASGI_GPUShaderStageFlags visibility;
 
@@ -17,4 +17,4 @@ struct ASGI_GPUBindGroupLayoutEntry {
 	ASGI_GPUTextureBindingLayout texture;
 	ASGI_GPUStorageTextureBindingLayout storageTexture;
 	ASGI_GPUExternalTextureBindingLayout externalTexture;
-};
+} ASGI_GPUBindGroupLayoutEntry;

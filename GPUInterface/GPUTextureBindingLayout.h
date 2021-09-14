@@ -3,8 +3,8 @@
 #include "GPUTextureSampleType.h"
 #include "GPUTextureViewDimension.h"
 
-struct ASGI_GPUTextureBindingLayout {
+typedef struct ASGI_GPUTextureBindingLayout {
 	ASGI_GPUTextureSampleType sampleType;
 	ASGI_GPUTextureViewDimension viewDimension;
 	BOOL multisampled;
-};
+} ASGI_GPUTextureBindingLayout;

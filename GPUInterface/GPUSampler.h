@@ -1,5 +1,5 @@
 #pragma once
 
-struct ASGI_GPUSampler {
+typedef struct ASGI_GPUSampler {
 	const char* label;
-};
+} ASGI_GPUSampler;

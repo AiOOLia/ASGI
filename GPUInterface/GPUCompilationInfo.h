@@ -2,7 +2,7 @@
 
 #include "GPUCompilationMessage.h"
 
-struct ASGI_GPUCompilationInfo {
+typedef struct ASGI_GPUCompilationInfo {
 	const int numMessage;
 	const ASGI_GPUCompilationMessage* messages;
-};
+} ASGI_GPUCompilationInfo;

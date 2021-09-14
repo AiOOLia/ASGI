@@ -2,9 +2,8 @@
 
 #include "GPUDefines.h"
 
-struct ASGI_GPUExtent3D
-{
+typedef struct ASGI_GPUExtent3D {
 	ASGI_GPUIntegerCoordinate width;
-	ASGI_GPUIntegerCoordinate height = 1;
-	ASGI_GPUIntegerCoordinate depthOrArrayLayers = 1;
-};
+	ASGI_GPUIntegerCoordinate height;
+	ASGI_GPUIntegerCoordinate depthOrArrayLayers;
+} ASGI_GPUExtent3D;

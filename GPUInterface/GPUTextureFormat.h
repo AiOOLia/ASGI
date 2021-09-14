@@ -1,6 +1,6 @@
 #pragma once
 
-enum ASGI_GPUTextureFormat {
+typedef enum ASGI_GPUTextureFormat {
 	// 8-bit formats
 	ASGI_TEX_FORMAT_R8Unorm,
 	ASGI_TEX_FORMAT_R8Snorm,
@@ -77,4 +77,4 @@ enum ASGI_GPUTextureFormat {
 
 	// "depth32float-stencil8" feature
 	ASGI_TEX_FORMAT_Depth32FloatStencil8
-};
+} ASGI_GPUTextureFormat;

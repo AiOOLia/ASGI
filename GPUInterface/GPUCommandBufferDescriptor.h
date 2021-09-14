@@ -1,5 +1,5 @@
 #pragma once
 
-struct ASGI_GPUCommandBufferDescriptor {
+typedef struct ASGI_GPUCommandBufferDescriptor {
 	const char* label;
-};
+} ASGI_GPUCommandBufferDescriptor;

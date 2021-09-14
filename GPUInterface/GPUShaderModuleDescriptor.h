@@ -1,7 +1,7 @@
 #pragma once
 
 
-struct ASGI_GPUShaderModuleDescriptor {
+typedef struct ASGI_GPUShaderModuleDescriptor {
 	const char* code;
 	void* sourceMap;
-};
+} ASGI_GPUShaderModuleDescriptor;

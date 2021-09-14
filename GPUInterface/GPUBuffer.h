@@ -3,10 +3,9 @@
 #include "GPUDefines.h"
 #include "GPUMapMode.h"
 
-struct ASGI_GPUBuffer
-{
+typedef struct ASGI_GPUBuffer {
 	const char* label;
-};
+} ASGI_GPUBuffer;
 
 void asgiMap (ASGI_GPUBuffer* pBuffer, ASGI_GPUMapModeFlags mode, ASGI_GPUSize64 offset, ASGI_GPUSize64 size);
 

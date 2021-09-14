@@ -1,12 +1,14 @@
 ﻿#pragma once
 
+
+#include "Export.h"
 #include "GPUInterface\GPU.h"
 
-enum ASGI_GPU_INTERFACE_TYPE
+typedef enum ASGI_GPU_INTERFACE_TYPE
 {
 	ASGI_GPU_INTERFACE_TYPE_VULKAN,
 	ASGI_GPU_INTERFACE_TYPE_DIRECTX12
-};
+} ASGI_GPU_INTERFACE_TYPE;
 
-ASGI_GPU* asgiCreateGPUInstance(ASGI_GPU_INTERFACE_TYPE interfaceType);
+ASGI_API ASGI_GPU* asgiCreateGPUInstance(ASGI_GPU_INTERFACE_TYPE interfaceType);
 

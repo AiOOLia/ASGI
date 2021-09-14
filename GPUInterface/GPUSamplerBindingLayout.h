@@ -2,6 +2,6 @@
 
 #include "GPUSamplerBindingType.h"
 
-struct ASGI_GPUSamplerBindingLayout {
+typedef struct ASGI_GPUSamplerBindingLayout {
 	ASGI_GPUSamplerBindingType type;
-};
+} ASGI_GPUSamplerBindingLayout;

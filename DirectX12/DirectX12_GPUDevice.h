@@ -2,10 +2,10 @@
 
 #include "../GPUInterface/GPUDevice.h"
 
-struct  DX12_GPUDevice {
-	struct ASGI_GPUDevice gpuDevice;
+typedef struct  DX12_GPUDevice {
+	ASGI_GPUDevice gpuDevice;
 	//
-};
+} DX12_GPUDevice;
 
 ASGI_GPUBuffer* dx12CreateBuffer(ASGI_GPUDevice* pDevice, ASGI_GPUBufferDescriptor* pDescriptor);
 

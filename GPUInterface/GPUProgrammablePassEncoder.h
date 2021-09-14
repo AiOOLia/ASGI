@@ -3,8 +3,9 @@
 #include "GPUDefines.h"
 #include "GPUBindGroup.h"
 
-struct ASGI_GPUProgrammablePassEncoder {
-};
+typedef struct ASGI_GPUProgrammablePassEncoder {
+	int type;
+} ASGI_GPUProgrammablePassEncoder;
 
 void asgiSetBindGroup(ASGI_GPUProgrammablePassEncoder* pEncoder,
 	ASGI_GPUIndex32 index, ASGI_GPUBindGroup* pBindGroup, 

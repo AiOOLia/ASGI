@@ -2,7 +2,7 @@
 
 #include "GPUDefines.h"
 
-struct ASGI_GPUOrigin2D {
+typedef struct ASGI_GPUOrigin2D {
 	ASGI_GPUIntegerCoordinate x;
 	ASGI_GPUIntegerCoordinate y;
-};
+} ASGI_GPUOrigin2D;

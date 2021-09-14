@@ -1,5 +1,5 @@
 #pragma once
 
-struct ASGI_GPUBindGroup {
+typedef struct ASGI_GPUBindGroup {
 	const char* label;
-};
+} ASGI_GPUBindGroup;

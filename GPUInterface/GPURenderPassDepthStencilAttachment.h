@@ -5,7 +5,7 @@
 #include "GPUStoreOp.h"
 #include "GPUDefines.h"
 
-struct ASGI_GPURenderPassDepthStencilAttachment {
+typedef struct ASGI_GPURenderPassDepthStencilAttachment {
 	ASGI_GPUTextureView view;
 
 	ASGI_GPULoadOp depthLoadOp;
@@ -17,4 +17,4 @@ struct ASGI_GPURenderPassDepthStencilAttachment {
 	ASGI_GPUStencilValue stencilLoadValue;
 	ASGI_GPUStoreOp stencilStoreOp;
 	BOOL stencilReadOnly;
-};
+} ASGI_GPURenderPassDepthStencilAttachment;

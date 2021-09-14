@@ -3,7 +3,7 @@
 cmake_minimum_required (VERSION 3.8)
 
 project ("ASGI")
-
+add_definitions(-DASGI_EXPORT)
 
 # Use configure_depends to automatically reconfigure on filesystem
 # changes at the expense of computational overhead for CMake to
@@ -26,9 +26,9 @@ add_library (ASGI SHARED  "")
 
 asgi_glob_files(ASGI_GPU_INTERFACE_HEADERS GPUInterface/*.h GPUInterface/*.hpp)
 asgi_glob_files(ASGI_HEADERS ./*.h ./*.hpp)
-asgi_glob_files(ASGI_SRCS ./*.cpp)
+asgi_glob_files(ASGI_SRCS ./*.c ./*.cpp)
 
-asgi_glob_files(ASGI_DIRECTX12 DirectX12/*.h DirectX12/*.hpp DirectX12/*.cpp)
+asgi_glob_files(ASGI_DIRECTX12 DirectX12/*.h DirectX12/*.hpp DirectX12/*.c DirectX12/*.cpp)
 
 target_sources(
     ASGI

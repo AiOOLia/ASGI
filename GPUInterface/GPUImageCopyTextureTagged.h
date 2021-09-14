@@ -6,8 +6,7 @@
 #include "GPUTextureAspect.h"
 #include "GPUPredefinedColorSpace.h"
 
-struct ASGI_GPUImageCopyTextureTagged
-{
+typedef struct ASGI_GPUImageCopyTextureTagged {
 	//ASGI_GPUImageCopyTexture
 	ASGI_GPUTexture* texture;
 	ASGI_GPUIntegerCoordinate mipLevel;
@@ -16,4 +15,4 @@ struct ASGI_GPUImageCopyTextureTagged
 	//
     ASGI_GPUPredefinedColorSpace colorSpace;
     BOOL premultipliedAlpha;
-};
+} ASGI_GPUImageCopyTextureTagged;

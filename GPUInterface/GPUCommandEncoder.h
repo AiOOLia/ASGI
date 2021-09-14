@@ -1,5 +1,6 @@
 #pragma once
 
+#include "../Export.h"
 #include "GPURenderPassEncoder.h"
 #include "GPURenderPassDescriptor.h"
 #include "GPUComputePassEncoder.h"
@@ -10,11 +11,11 @@
 #include "GPUCommandBufferDescriptor.h"
 #include "GPUCommandBuffer.h"
 
-struct ASGI_GPUCommandEncoder {
+typedef struct ASGI_GPUCommandEncoder {
 	const char* label;
-};
+} ASGI_GPUCommandEncoder;
 
-ASGI_GPURenderPassEncoder* asgiBeginRenderPass(ASGI_GPUCommandEncoder* pEncoder, ASGI_GPURenderPassDescriptor* pDescriptor);
+ ASGI_GPURenderPassEncoder* asgiBeginRenderPass(ASGI_GPUCommandEncoder* pEncoder, ASGI_GPURenderPassDescriptor* pDescriptor);
 
 ASGI_GPUComputePassEncoder* asgiBeginComputePass(ASGI_GPUCommandEncoder* pEncoder, ASGI_GPUComputePassDescriptor* pDescriptor);
 

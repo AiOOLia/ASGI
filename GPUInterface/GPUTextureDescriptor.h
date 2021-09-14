@@ -5,7 +5,7 @@
 #include "GPUTextureFormat.h"
 #include "GPUTextureUsage.h"
 
-struct ASGI_GPUTextureDescriptor {
+typedef struct ASGI_GPUTextureDescriptor {
 	const char* label;
 	ASGI_GPUExtent3D size;
 	ASGI_GPUIntegerCoordinate mipLevelCount;
@@ -13,4 +13,4 @@ struct ASGI_GPUTextureDescriptor {
 	ASGI_GPUTextureDimension dimension;
 	ASGI_GPUTextureFormat format;
 	ASGI_GPUTextureUsageFlags usage;
-};
+} ASGI_GPUTextureDescriptor;

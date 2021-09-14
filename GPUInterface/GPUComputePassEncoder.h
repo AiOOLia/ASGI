@@ -5,14 +5,14 @@
 #include "GPUBuffer.h"
 #include "GPUProgrammablePassEncoder.h"
 
-struct ASGI_GPUComputePassEncoder {
+typedef struct ASGI_GPUComputePassEncoder {
 	const char* label;
 	ASGI_GPUProgrammablePassEncoder* programmablePassEncoder;
-};
+} ASGI_GPUComputePassEncoder;
 
 void asgiSetComputePipeline(ASGI_GPUComputePassEncoder* pEncoder, ASGI_GPUComputePipeline* pPipeline);
 
-void asgiDispatch(ASGI_GPUComputePassEncoder* pEncoder, ASGI_GPUSize32 x, ASGI_GPUSize32 y = 1, ASGI_GPUSize32 z = 1);
+void asgiDispatch(ASGI_GPUComputePassEncoder* pEncoder, ASGI_GPUSize32 x, ASGI_GPUSize32 y, ASGI_GPUSize32 z);
 
 void asgiDispatchIndirect(ASGI_GPUComputePassEncoder* pEncoder, ASGI_GPUBuffer* pIndirectBuffer, ASGI_GPUSize64 indirectOffset);
 

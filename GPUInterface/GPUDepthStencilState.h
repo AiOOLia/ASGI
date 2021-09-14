@@ -5,7 +5,7 @@
 #include "GPUStencilFaceState.h"
 #include "GPUDefines.h"
 
-struct ASGI_GPUDepthStencilState {
+typedef struct ASGI_GPUDepthStencilState {
 	ASGI_GPUTextureFormat format;
 
 	BOOL depthWriteEnabled;
@@ -20,4 +20,4 @@ struct ASGI_GPUDepthStencilState {
 	ASGI_GPUDepthBias depthBias;
 	float depthBiasSlopeScale;
 	float depthBiasClamp;
-};
+} ASGI_GPUDepthStencilState;

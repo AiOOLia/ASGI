@@ -1,6 +1,6 @@
 #pragma once
 
-struct ASGI_GPUSupportedLimits {
+typedef struct ASGI_GPUSupportedLimits {
 	unsigned long maxTextureDimension1D;
 	unsigned long maxTextureDimension2D;
 	unsigned long maxTextureDimension3D;
@@ -27,4 +27,4 @@ struct ASGI_GPUSupportedLimits {
 	unsigned long maxComputeWorkgroupSizeY;
 	unsigned long maxComputeWorkgroupSizeZ;
 	unsigned long maxComputeWorkgroupsPerDimension;
-};
+} ASGI_GPUSupportedLimits;

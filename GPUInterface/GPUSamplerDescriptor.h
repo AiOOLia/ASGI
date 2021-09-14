@@ -4,7 +4,7 @@
 #include "GPUFilterMode.h"
 #include "GPUCompareFunction.h"
 
-struct ASGI_GPUSamplerDescriptor {
+typedef struct ASGI_GPUSamplerDescriptor {
 	const char* label;
 	ASGI_GPUAddressMode addressModeU;
 	ASGI_GPUAddressMode addressModeV;
@@ -15,5 +15,5 @@ struct ASGI_GPUSamplerDescriptor {
 	float lodMinClamp;
 	float lodMaxClamp;
 	ASGI_GPUCompareFunction compare;
-	unsigned short maxAnisotropy = 1;
-};
+	unsigned short maxAnisotropy;
+} ASGI_GPUSamplerDescriptor;

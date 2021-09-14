@@ -7,7 +7,7 @@
 #include "GPUMultisampleState.h"
 #include "GPUFragmentState.h"
 
-struct ASGI_GPURenderPipelineDescriptor {
+typedef struct ASGI_GPURenderPipelineDescriptor {
 	const char* label;
 	ASGI_GPUPipelineLayout* layout;
 	ASGI_GPUVertexState vertex;
@@ -15,4 +15,4 @@ struct ASGI_GPURenderPipelineDescriptor {
 	ASGI_GPUDepthStencilState depthStencil;
 	ASGI_GPUMultisampleState multisample;
 	ASGI_GPUFragmentState fragment;
-};
+} ASGI_GPURenderPipelineDescriptor;

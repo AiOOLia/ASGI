@@ -6,10 +6,10 @@
 #include "GPUBufferBinding.h"
 #include "GPUExternalTexture.h"
 
-struct ASGI_GPUBindGroupEntry {
+typedef struct ASGI_GPUBindGroupEntry {
 	ASGI_GPUIndex32 binding;
 	ASGI_GPUSampler* resource_sampler;
 	ASGI_GPUTextureView* resource_texture_view;
 	ASGI_GPUBufferBinding* resource_buffer_binding;
 	ASGI_GPUExternalTexture* resource_external_texture;
-};
+} ASGI_GPUBindGroupEntry;

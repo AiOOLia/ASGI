@@ -5,10 +5,10 @@
 #include "GPUColor.h"
 #include "GPUStoreOp.h"
 
-struct ASGI_GPURenderPassColorAttachment {
+typedef struct ASGI_GPURenderPassColorAttachment {
 	ASGI_GPUTextureView view;
 	ASGI_GPUTextureView resolveTarget;
 	ASGI_GPULoadOp loadOp;
 	ASGI_GPUColor loadValue;
 	ASGI_GPUStoreOp storeOp;
-};
+} ASGI_GPURenderPassColorAttachment;

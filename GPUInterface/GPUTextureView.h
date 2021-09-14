@@ -1,5 +1,5 @@
 #pragma once
 
-struct ASGI_GPUTextureView {
+typedef struct ASGI_GPUTextureView {
 	const char* label;
-};
+} ASGI_GPUTextureView;

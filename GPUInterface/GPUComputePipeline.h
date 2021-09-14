@@ -2,7 +2,7 @@
 
 #include "GPUPipelineBase.h"
 
-struct ASGI_GPUComputePipeline {
+typedef struct ASGI_GPUComputePipeline {
 	const char* label;
 	struct ASGI_GPUPipelineBase* pipelineBase;
-};
+} ASGI_GPUComputePipeline;

@@ -1,6 +1,5 @@
 #pragma once
 
-
 #include "GPUSupportedFeatures.h"
 #include "GPUSupportedLimits.h"
 #include "GPUQueue.h"
@@ -32,14 +31,13 @@
 #include "GPUQuerySetDescriptor.h"
 
 struct ASGI_GPUAdapter;
-struct ASGI_GPUDevice
-{
+typedef struct ASGI_GPUDevice {
 	const char* label;
-	ASGI_GPUAdapter* adapter;
+	struct ASGI_GPUAdapter* adapter;
 	ASGI_GPUSupportedFeatures features;
 	ASGI_GPUSupportedLimits limits;
 	ASGI_GPUQueue* queue;
-};
+} ASGI_GPUDevice;
 
 ASGI_GPUBuffer* asgiCreateBuffer(ASGI_GPUDevice* pDevice, ASGI_GPUBufferDescriptor* pDescriptor);
 

@@ -5,7 +5,7 @@
 #include "GPUTextureViewDimension.h"
 #include "GPUTextureAspect.h"
 
-struct ASGI_GPUTextureViewDescriptor {
+typedef struct ASGI_GPUTextureViewDescriptor {
 	ASGI_GPUTextureFormat format;
 	ASGI_GPUTextureViewDimension dimension;
 	ASGI_GPUTextureAspect aspect;
@@ -13,4 +13,4 @@ struct ASGI_GPUTextureViewDescriptor {
 	ASGI_GPUIntegerCoordinate mipLevelCount;
 	ASGI_GPUIntegerCoordinate baseArrayLayer;
 	ASGI_GPUIntegerCoordinate arrayLayerCount;
-};
+} ASGI_GPUTextureViewDescriptor;

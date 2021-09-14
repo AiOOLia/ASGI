@@ -2,6 +2,6 @@
 
 #include "GPUDefines.h"
 
-struct ASGI_GPUCommandEncoderDescriptor {
+typedef struct ASGI_GPUCommandEncoderDescriptor {
 	BOOL measureExecutionTime;
-};
+} ASGI_GPUCommandEncoderDescriptor;

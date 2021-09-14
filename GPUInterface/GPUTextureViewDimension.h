@@ -1,10 +1,10 @@
 #pragma once
 
-enum ASGI_GPUTextureViewDimension {
+typedef enum ASGI_GPUTextureViewDimension {
 	ASGI_TEX_VIEW_DIMENSION_D1,
 	ASGI_TEX_VIEW_DIMENSION_D2,
 	ASGI_TEX_VIEW_DIMENSION_D2_array,
 	ASGI_TEX_VIEW_DIMENSION_Cube,
 	ASGI_TEX_VIEW_DIMENSION_CubeArray,
 	ASGI_TEX_VIEW_DIMENSION_D3
-};
+} ASGI_GPUTextureViewDimension;

@@ -4,7 +4,7 @@
 #include "GPUColorTargetState.h"
 #include "GPUDefines.h"
 
-struct ASGI_GPUFragmentState {
+typedef struct ASGI_GPUFragmentState {
 	ASGI_GPUShaderModule* module;
 	const char* entryPoint;
 	int numConstant;
@@ -12,4 +12,4 @@ struct ASGI_GPUFragmentState {
 	ASGI_GPUPipelineConstantValue* values;
 	int numTarget;
 	ASGI_GPUColorTargetState* targets;
-};
+} ASGI_GPUFragmentState;

@@ -4,8 +4,8 @@
 #include "GPUTextureFormat.h"
 #include "GPUTextureViewDimension.h"
 
-struct ASGI_GPUStorageTextureBindingLayout {
+typedef struct ASGI_GPUStorageTextureBindingLayout {
 	ASGI_GPUStorageTextureAccess access;
 	ASGI_GPUTextureFormat format;
 	ASGI_GPUTextureViewDimension viewDimension;
-};
+} ASGI_GPUStorageTextureBindingLayout;

@@ -5,8 +5,9 @@
 #include "GPUBuffer.h"
 #include "GPUIndexFormat.h"
 
-struct ASGI_GPURenderEncoderBase {
-};
+typedef struct ASGI_GPURenderEncoderBase {
+	int type;
+} ASGI_GPURenderEncoderBase;
 
 void asgiSetRenderPipeline (ASGI_GPURenderEncoderBase* pEncoder, ASGI_GPURenderPipeline* pPipeline);
 

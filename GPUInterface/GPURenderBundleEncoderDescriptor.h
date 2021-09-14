@@ -3,7 +3,7 @@
 #include "GPUTextureFormat.h"
 #include "GPUDefines.h"
 
-struct ASGI_GPURenderBundleEncoderDescriptor {
+typedef struct ASGI_GPURenderBundleEncoderDescriptor {
 	const char* label;
 	int numColorFormat;
 	ASGI_GPUTextureFormat* colorFormats;
@@ -11,4 +11,4 @@ struct ASGI_GPURenderBundleEncoderDescriptor {
 	ASGI_GPUSize32 sampleCount;
 	BOOL depthReadOnly;
 	BOOL stencilReadOnly;
-};
+} ASGI_GPURenderBundleEncoderDescriptor;

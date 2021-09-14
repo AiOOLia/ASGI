@@ -5,11 +5,11 @@
 #include "GPUSupportedFeatures.h"
 #include "GPUSupportedLimits.h"
 
-struct ASGI_GPUAdapter {
+typedef struct ASGI_GPUAdapter {
 	const char* name;
 	ASGI_GPUSupportedFeatures features;
 	ASGI_GPUSupportedLimits limits;
 	BOOL isFallbackAdapter;
-};
+} ASGI_GPUAdapter;
 
 ASGI_GPUDevice* asgiRequestDevice (ASGI_GPUAdapter* pAdapter, ASGI_GPUDeviceDescriptor* pDescriptor);

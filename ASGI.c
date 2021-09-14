@@ -91,8 +91,8 @@ struct GPUInterface
 	ASGI_GPUBindGroupLayout* (*ASGI_FUNC_GetBindGroupLayout)(ASGI_GPUPipelineBase* pPipline, unsigned long index);
 	//
 	void (*ASGI_FUNC_DestoryGPUQuerySet)(ASGI_GPUQuerySet* pQuerySet);
-};
-static GPUInterface sGPU;
+}  sGPU;
+
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ASGI_GPUAdapter* asgiRequestAdapter(
 	ASGI_GPU* pGpu,
@@ -183,7 +183,7 @@ void asgiCreateComputePipelineAsync(
 	ASGI_GPUComputePipelineDescriptor* pDescriptor,
 	void (*callBack)(ASGI_GPUComputePipeline*))
 {
-	return sGPU.ASGI_FUNC_CreateComputePipelineAsync(pDevice, pDescriptor, callBack);
+	 sGPU.ASGI_FUNC_CreateComputePipelineAsync(pDevice, pDescriptor, callBack);
 }
 
 void asgiCreateRenderPipelineAsync(
@@ -191,7 +191,7 @@ void asgiCreateRenderPipelineAsync(
 	ASGI_GPURenderPipelineDescriptor* pDescriptor,
 	void (*callBack)(ASGI_GPURenderPipeline*))
 {
-	return sGPU.ASGI_FUNC_CreateRenderPipelineAsync(pDevice, pDescriptor, callBack);
+	 sGPU.ASGI_FUNC_CreateRenderPipelineAsync(pDevice, pDescriptor, callBack);
 }
 
 ASGI_GPUCommandEncoder* asgiCreateCommandEncoder(
@@ -220,7 +220,7 @@ void asgiSubmit(
 	int numCommandBuffer,
 	ASGI_GPUCommandBuffer* pCommandBuffers)
 {
-	return sGPU.ASGI_FUNC_Submit(pQueue, numCommandBuffer, pCommandBuffers);
+	 sGPU.ASGI_FUNC_Submit(pQueue, numCommandBuffer, pCommandBuffers);
 }
 
 void asgiSubmitAsync(
@@ -229,7 +229,7 @@ void asgiSubmitAsync(
 	ASGI_GPUCommandBuffer* pCommandBuffers,
 	void (*onSubmittedWorkDone)())
 {
-	return sGPU.ASGI_FUNC_SubmitAsync(pQueue, numCommandBuffer, pCommandBuffers, onSubmittedWorkDone);
+	 sGPU.ASGI_FUNC_SubmitAsync(pQueue, numCommandBuffer, pCommandBuffers, onSubmittedWorkDone);
 }
 
 void asgiWriteBuffer(
@@ -240,7 +240,7 @@ void asgiWriteBuffer(
 	ASGI_GPUSize64 dataOffset,
 	ASGI_GPUSize64 size)
 {
-	return sGPU.ASGI_FUNC_WriteBuffer(pQueue, pBuffer, bufferOffset, pData, dataOffset, size);
+	 sGPU.ASGI_FUNC_WriteBuffer(pQueue, pBuffer, bufferOffset, pData, dataOffset, size);
 }
 
 void asgiWriteTexture(
@@ -250,7 +250,7 @@ void asgiWriteTexture(
 	ASGI_GPUImageDataLayout* pDataLayout,
 	ASGI_GPUExtent3D size)
 {
-	return sGPU.ASGI_FUNC_WriteTexture(pQueue, pDestination, pData, pDataLayout, size);
+	 sGPU.ASGI_FUNC_WriteTexture(pQueue, pDestination, pData, pDataLayout, size);
 }
 
 void asgiCopyExternalImageToTexture(
@@ -259,7 +259,7 @@ void asgiCopyExternalImageToTexture(
 	ASGI_GPUImageCopyTextureTagged* pDestination,
 	ASGI_GPUExtent3D copySize)
 {
-	return sGPU.ASGI_FUNC_CopyExternalImageToTexture(pQueue, pSource, pDestination, copySize);
+	 sGPU.ASGI_FUNC_CopyExternalImageToTexture(pQueue, pSource, pDestination, copySize);
 }
 //
 void asgiMap(
@@ -268,7 +268,7 @@ void asgiMap(
 	ASGI_GPUSize64 offset,
 	ASGI_GPUSize64 size)
 {
-	return sGPU.ASGI_FUNC_Map(pBuffer, mode, offset, size);
+	 sGPU.ASGI_FUNC_Map(pBuffer, mode, offset, size);
 }
 
 void asgiMapAsync(
@@ -278,7 +278,7 @@ void asgiMapAsync(
 	ASGI_GPUSize64 size,
 	void (*callBack)())
 {
-	return sGPU.ASGI_FUNC_MapAsync(pBuffer, mode, offset, size, callBack);
+	 sGPU.ASGI_FUNC_MapAsync(pBuffer, mode, offset, size, callBack);
 }
 
 unsigned char* asgiGetMappedRange(
@@ -291,12 +291,12 @@ unsigned char* asgiGetMappedRange(
 
 void asgiUnmap(ASGI_GPUBuffer* pBuffer)
 {
-	return sGPU.ASGI_FUNC_Unmap(pBuffer);
+	 sGPU.ASGI_FUNC_Unmap(pBuffer);
 }
 
 void asgiDestroyGPUBuffer(ASGI_GPUBuffer* pBuffer)
 {
-	return sGPU.ASGI_FUNC_DestroyGPUBuffer(pBuffer);
+	 sGPU.ASGI_FUNC_DestroyGPUBuffer(pBuffer);
 }
 //
 ASGI_GPUTextureView* asgiCreateView(
@@ -308,7 +308,7 @@ ASGI_GPUTextureView* asgiCreateView(
 
 void asgiDestoryGPUTexture(ASGI_GPUTexture* pTexture)
 {
-	return sGPU.ASGI_FUNC_DestoryGPUTexture(pTexture);
+	 sGPU.ASGI_FUNC_DestoryGPUTexture(pTexture);
 }
 //
 ASGI_GPUCompilationInfo* asgiCompilationInfo(ASGI_GPUShaderModule* pShaderModule)
@@ -338,7 +338,7 @@ void asgiCopyBufferToBuffer(
 	ASGI_GPUSize64 destinationOffset,
 	ASGI_GPUSize64 size)
 {
-	return sGPU.ASGI_FUNC_CopyBufferToBuffer(pEncoder, pSource, sourceOffset, pDestination, destinationOffset, size);
+	 sGPU.ASGI_FUNC_CopyBufferToBuffer(pEncoder, pSource, sourceOffset, pDestination, destinationOffset, size);
 }
 
 void asgiCopyBufferToTexture(
@@ -347,7 +347,7 @@ void asgiCopyBufferToTexture(
 	ASGI_GPUImageCopyTexture* pDestination,
 	ASGI_GPUExtent3D copySize)
 {
-	return sGPU.ASGI_FUNC_CopyBufferToTexture(pEncoder, pSource, pDestination, copySize);
+	 sGPU.ASGI_FUNC_CopyBufferToTexture(pEncoder, pSource, pDestination, copySize);
 }
 
 void asgiCopyTextureToBuffer(
@@ -356,7 +356,7 @@ void asgiCopyTextureToBuffer(
 	ASGI_GPUImageCopyBuffer* pDestination,
 	ASGI_GPUExtent3D copySize)
 {
-	return sGPU.ASGI_FUNC_CopyTextureToBuffer(pEncoder, pSource, pDestination, copySize);
+	 sGPU.ASGI_FUNC_CopyTextureToBuffer(pEncoder, pSource, pDestination, copySize);
 }
 
 void asgiCopyTextureToTexture(
@@ -365,26 +365,26 @@ void asgiCopyTextureToTexture(
 	ASGI_GPUImageCopyTexture* pDestination,
 	ASGI_GPUExtent3D copySize)
 {
-	return sGPU.ASGI_FUNC_CopyTextureToTexture(pEncoder, pSource, pDestination, copySize);
+	 sGPU.ASGI_FUNC_CopyTextureToTexture(pEncoder, pSource, pDestination, copySize);
 }
 
 void asgiPushDebugGroupCE(
 	ASGI_GPUCommandEncoder* pEncoder,
 	const char* groupLabel)
 {
-	return sGPU.ASGI_FUNC_PushDebugGroupCE(pEncoder, groupLabel);
+	 sGPU.ASGI_FUNC_PushDebugGroupCE(pEncoder, groupLabel);
 }
 
 void asgiPopDebugGroupCE(ASGI_GPUCommandEncoder* pEncoder)
 {
-	return sGPU.ASGI_FUNC_PopDebugGroupCE(pEncoder);
+	 sGPU.ASGI_FUNC_PopDebugGroupCE(pEncoder);
 }
 
 void asgiInsertDebugMarkerCE(
 	ASGI_GPUCommandEncoder* pEncoder,
 	const char* markerLabel)
 {
-	return sGPU.ASGI_FUNC_InsertDebugMarkerCE(pEncoder, markerLabel);
+	 sGPU.ASGI_FUNC_InsertDebugMarkerCE(pEncoder, markerLabel);
 }
 
 void asgiWriteTimestampCE(
@@ -392,7 +392,7 @@ void asgiWriteTimestampCE(
 	ASGI_GPUQuerySet* pQuerySet,
 	ASGI_GPUSize32 queryIndex)
 {
-	return sGPU.ASGI_FUNC_WriteTimestampCE(pEncoder, pQuerySet, queryIndex);
+	 sGPU.ASGI_FUNC_WriteTimestampCE(pEncoder, pQuerySet, queryIndex);
 }
 
 void asgiResolveQuerySet(
@@ -403,14 +403,14 @@ void asgiResolveQuerySet(
 	ASGI_GPUBuffer* pDestination,
 	ASGI_GPUSize64 destinationOffset)
 {
-	return sGPU.ASGI_FUNC_ResolveQuerySet(pEncoder, pQuerySet, firstQuery, queryCount, pDestination, destinationOffset);
+	 sGPU.ASGI_FUNC_ResolveQuerySet(pEncoder, pQuerySet, firstQuery, queryCount, pDestination, destinationOffset);
 }
 
 ASGI_GPUCommandBuffer* asgiFinishCommandEncoder(
 	ASGI_GPUCommandEncoder* pEncoder,
 	ASGI_GPUCommandBufferDescriptor* pDescriptor)
 {
-	return sGPU.ASGI_FUNC_FinishCommandEncoder(pEncoder, pDescriptor);
+	 return sGPU.ASGI_FUNC_FinishCommandEncoder(pEncoder, pDescriptor);
 }
 //
 void asgiSetBindGroup(
@@ -420,7 +420,7 @@ void asgiSetBindGroup(
 	int numOffset,
 	ASGI_GPUBufferDynamicOffset* dynamicOffsets)
 {
-	return sGPU.ASGI_FUNC_SetBindGroup(pEncoder, index, pBindGroup, numOffset, dynamicOffsets);
+	 sGPU.ASGI_FUNC_SetBindGroup(pEncoder, index, pBindGroup, numOffset, dynamicOffsets);
 }
 
 void asgiSetBindGroupRange(
@@ -432,33 +432,33 @@ void asgiSetBindGroupRange(
 	ASGI_GPUSize64 dynamicOffsetsDataStart,
 	ASGI_GPUSize32 dynamicOffsetsDataLength)
 {
-	return sGPU.ASGI_FUNC_SetBindGroupRange(pEncoder, index, pBindGroup, numoffsetsData, dynamicOffsetsData, dynamicOffsetsDataStart, dynamicOffsetsDataLength);
+	 sGPU.ASGI_FUNC_SetBindGroupRange(pEncoder, index, pBindGroup, numoffsetsData, dynamicOffsetsData, dynamicOffsetsDataStart, dynamicOffsetsDataLength);
 }
 
 void asgiPushDebugGroupPPE(
 	ASGI_GPUProgrammablePassEncoder* pEncoder,
 	const char* groupLabel)
 {
-	return sGPU.ASGI_FUNC_PushDebugGroupPPE(pEncoder, groupLabel);
+	 sGPU.ASGI_FUNC_PushDebugGroupPPE(pEncoder, groupLabel);
 }
 
 void asgiPopDebugGroupPPE(ASGI_GPUProgrammablePassEncoder* pEncoder)
 {
-	return sGPU.ASGI_FUNC_PopDebugGroupPPE(pEncoder);
+	 sGPU.ASGI_FUNC_PopDebugGroupPPE(pEncoder);
 }
 
 void asgiInsertDebugMarkerPPE(
 	ASGI_GPUProgrammablePassEncoder* pEncoder,
 	const char* markerLabel)
 {
-	return sGPU.ASGI_FUNC_InsertDebugMarkerPPE(pEncoder, markerLabel);
+	 sGPU.ASGI_FUNC_InsertDebugMarkerPPE(pEncoder, markerLabel);
 }
 //
 void asgiSetRenderPipeline(
 	ASGI_GPURenderEncoderBase* pEncoder,
 	ASGI_GPURenderPipeline* pPipeline)
 {
-	return sGPU.ASGI_FUNC_SetRenderPipeline(pEncoder, pPipeline);
+	 sGPU.ASGI_FUNC_SetRenderPipeline(pEncoder, pPipeline);
 }
 void asgiSetIndexBuffer(
 	ASGI_GPURenderEncoderBase* pEncoder,
@@ -467,7 +467,7 @@ void asgiSetIndexBuffer(
 	ASGI_GPUSize64 offset,
 	ASGI_GPUSize64 size)
 {
-	return sGPU.ASGI_FUNC_SetIndexBuffer(pEncoder, pBuffer, indexFormat, offset, size);
+	 sGPU.ASGI_FUNC_SetIndexBuffer(pEncoder, pBuffer, indexFormat, offset, size);
 }
 
 void asgiSetVertexBuffer(
@@ -477,7 +477,7 @@ void asgiSetVertexBuffer(
 	ASGI_GPUSize64 offset,
 	ASGI_GPUSize64 size)
 {
-	return sGPU.ASGI_FUNC_SetVertexBuffer(pEncoder, slot, pBuffer, offset, size);
+	 sGPU.ASGI_FUNC_SetVertexBuffer(pEncoder, slot, pBuffer, offset, size);
 }
 
 void asgiDraw(
@@ -487,7 +487,7 @@ void asgiDraw(
 	ASGI_GPUSize32 firstVertex,
 	ASGI_GPUSize32 firstInstance)
 {
-	return sGPU.ASGI_FUNC_Draw(pEncoder, vertexCount, instanceCount, firstVertex, firstInstance);
+	 sGPU.ASGI_FUNC_Draw(pEncoder, vertexCount, instanceCount, firstVertex, firstInstance);
 }
 
 void asgiDrawIndexed(
@@ -498,7 +498,7 @@ void asgiDrawIndexed(
 	ASGI_GPUSignedOffset32 baseVertex,
 	ASGI_GPUSize32 firstInstance)
 {
-	return sGPU.ASGI_FUNC_DrawIndexed(pEncoder, indexCount, instanceCount, firstIndex, baseVertex, firstInstance);
+	 sGPU.ASGI_FUNC_DrawIndexed(pEncoder, indexCount, instanceCount, firstIndex, baseVertex, firstInstance);
 }
 
 void asgiDrawIndirect(
@@ -506,7 +506,7 @@ void asgiDrawIndirect(
 	ASGI_GPUBuffer* pIndirectBuffer,
 	ASGI_GPUSize64 indirectOffset)
 {
-	return sGPU.ASGI_FUNC_DrawIndirect(pEncoder, pIndirectBuffer, indirectOffset);
+	 sGPU.ASGI_FUNC_DrawIndirect(pEncoder, pIndirectBuffer, indirectOffset);
 }
 
 void asgiDrawIndexedIndirect(
@@ -514,7 +514,7 @@ void asgiDrawIndexedIndirect(
 	ASGI_GPUBuffer* pIndirectBuffer,
 	ASGI_GPUSize64 indirectOffset)
 {
-	return sGPU.ASGI_FUNC_DrawIndexedIndirect(pEncoder, pIndirectBuffer, indirectOffset);
+	 sGPU.ASGI_FUNC_DrawIndexedIndirect(pEncoder, pIndirectBuffer, indirectOffset);
 }
 //
 void asgiSetScissorRect(
@@ -524,7 +524,7 @@ void asgiSetScissorRect(
 	ASGI_GPUIntegerCoordinate width,
 	ASGI_GPUIntegerCoordinate height)
 {
-	return sGPU.ASGI_FUNC_SetScissorRect(pEncoder, x, y, width, height);
+	 sGPU.ASGI_FUNC_SetScissorRect(pEncoder, x, y, width, height);
 }
 
 void asgiSetViewport(
@@ -532,33 +532,33 @@ void asgiSetViewport(
 	float x, float y, float width, float height,
 	float minDepth, float maxDepth)
 {
-	return sGPU.ASGI_FUNC_SetViewport(pEncoder, x, y, width, height, minDepth, maxDepth);
+	 sGPU.ASGI_FUNC_SetViewport(pEncoder, x, y, width, height, minDepth, maxDepth);
 }
 
 void asgiSetBlendConstant(
 	ASGI_GPURenderPassEncoder* pEncoder,
 	ASGI_GPUColor* pColor)
 {
-	return sGPU.ASGI_FUNC_SetBlendConstant(pEncoder, pColor);
+	 sGPU.ASGI_FUNC_SetBlendConstant(pEncoder, pColor);
 }
 
 void asgiSetStencilReference(
 	ASGI_GPURenderPassEncoder* pEncoder,
 	ASGI_GPUStencilValue reference)
 {
-	return sGPU.ASGI_FUNC_SetStencilReference(pEncoder, reference);
+	 sGPU.ASGI_FUNC_SetStencilReference(pEncoder, reference);
 }
 
 void asgiBeginOcclusionQuery(
 	ASGI_GPURenderPassEncoder* pEncoder,
 	ASGI_GPUSize32 queryIndex)
 {
-	return sGPU.ASGI_FUNC_BeginOcclusionQuery(pEncoder, queryIndex);
+	 sGPU.ASGI_FUNC_BeginOcclusionQuery(pEncoder, queryIndex);
 }
 
 void asgiEndOcclusionQuery(ASGI_GPURenderPassEncoder* pEncoder)
 {
-	return sGPU.ASGI_FUNC_EndOcclusionQuery(pEncoder);
+	 sGPU.ASGI_FUNC_EndOcclusionQuery(pEncoder);
 }
 
 void asgiBeginRenderPipelineStatisticsQuery(
@@ -566,11 +566,11 @@ void asgiBeginRenderPipelineStatisticsQuery(
 	ASGI_GPUQuerySet* pQuerySet,
 	ASGI_GPUSize32 queryIndex)
 {
-	return sGPU.ASGI_FUNC_BeginRenderPipelineStatisticsQuery(pEncoder, pQuerySet, queryIndex);
+	 sGPU.ASGI_FUNC_BeginRenderPipelineStatisticsQuery(pEncoder, pQuerySet, queryIndex);
 }
 void asgiEndRenderPipelineStatisticsQuer(ASGI_GPURenderPassEncoder* pEncoder)
 {
-	return sGPU.ASGI_FUNC_EndRenderPipelineStatisticsQuery(pEncoder);
+	 sGPU.ASGI_FUNC_EndRenderPipelineStatisticsQuery(pEncoder);
 }
 
 void asgiWriteTimestampRPE(
@@ -578,7 +578,7 @@ void asgiWriteTimestampRPE(
 	ASGI_GPUQuerySet* pQuerySet,
 	ASGI_GPUSize32 queryIndex)
 {
-	return sGPU.ASGI_FUNC_WriteTimestampRPE(pEncoder, pQuerySet, queryIndex);
+	 sGPU.ASGI_FUNC_WriteTimestampRPE(pEncoder, pQuerySet, queryIndex);
 }
 
 void asgiExecuteBundles(
@@ -586,12 +586,12 @@ void asgiExecuteBundles(
 	int numBundle,
 	ASGI_GPURenderBundle* bundles)
 {
-	return sGPU.ASGI_FUNC_ExecuteBundles(pEncoder, numBundle, bundles);
+	 sGPU.ASGI_FUNC_ExecuteBundles(pEncoder, numBundle, bundles);
 }
 
 void asgiEndRenderPass(ASGI_GPURenderPassEncoder* pEncoder)
 {
-	return sGPU.ASGI_FUNC_EndRenderPass(pEncoder);
+	 sGPU.ASGI_FUNC_EndRenderPass(pEncoder);
 }
 //
 ASGI_GPURenderBundle* asgiFinishRenderBundleEncoder(
@@ -605,14 +605,14 @@ void asgiSetComputePipeline(
 	ASGI_GPUComputePassEncoder* pEncoder,
 	ASGI_GPUComputePipeline* pPipeline)
 {
-	return sGPU.ASGI_FUNC_SetComputePipeline(pEncoder, pPipeline);
+	 sGPU.ASGI_FUNC_SetComputePipeline(pEncoder, pPipeline);
 }
 
 void asgiDispatch(
 	ASGI_GPUComputePassEncoder* pEncoder,
 	ASGI_GPUSize32 x, ASGI_GPUSize32 y, ASGI_GPUSize32 z)
 {
-	return sGPU.ASGI_FUNC_Dispatch(pEncoder, x, y, z);
+	 sGPU.ASGI_FUNC_Dispatch(pEncoder, x, y, z);
 }
 
 void asgiDispatchIndirect(
@@ -620,7 +620,7 @@ void asgiDispatchIndirect(
 	ASGI_GPUBuffer* pIndirectBuffer,
 	ASGI_GPUSize64 indirectOffset)
 {
-	return sGPU.ASGI_FUNC_DispatchIndirect(pEncoder, pIndirectBuffer, indirectOffset);
+	 sGPU.ASGI_FUNC_DispatchIndirect(pEncoder, pIndirectBuffer, indirectOffset);
 }
 
 void asgiBeginComputePipelineStatisticsQuery(
@@ -628,12 +628,12 @@ void asgiBeginComputePipelineStatisticsQuery(
 	ASGI_GPUQuerySet* pQuerySet,
 	ASGI_GPUSize32 queryIndex)
 {
-	return sGPU.ASGI_FUNC_BeginComputePipelineStatisticsQuery(pEncoder, pQuerySet, queryIndex);
+	 sGPU.ASGI_FUNC_BeginComputePipelineStatisticsQuery(pEncoder, pQuerySet, queryIndex);
 }
 
 void asgiEndComputePipelineStatisticsQuery(ASGI_GPUComputePassEncoder* pEncoder)
 {
-	return sGPU.ASGI_FUNC_EndComputePipelineStatisticsQuery(pEncoder);
+	 sGPU.ASGI_FUNC_EndComputePipelineStatisticsQuery(pEncoder);
 }
 
 void asgiWriteTimestampCPE(
@@ -641,12 +641,12 @@ void asgiWriteTimestampCPE(
 	ASGI_GPUQuerySet* pQuerySet,
 	ASGI_GPUSize32 queryIndex)
 {
-	return sGPU.ASGI_FUNC_WriteTimestampCPE(pEncoder, pQuerySet, queryIndex);
+	 sGPU.ASGI_FUNC_WriteTimestampCPE(pEncoder, pQuerySet, queryIndex);
 }
 
 void asgiEndComputePass(ASGI_GPUComputePassEncoder* pEncoder)
 {
-	return sGPU.ASGI_FUNC_EndComputePass(pEncoder);
+	 sGPU.ASGI_FUNC_EndComputePass(pEncoder);
 }
 //
 ASGI_GPUBindGroupLayout* asgiGetBindGroupLayout(
@@ -658,7 +658,7 @@ ASGI_GPUBindGroupLayout* asgiGetBindGroupLayout(
 //
 void asgiDestoryGPUQuerySet(ASGI_GPUQuerySet* pQuerySet)
 {
-	return sGPU.ASGI_FUNC_DestoryGPUQuerySet(pQuerySet);
+	 sGPU.ASGI_FUNC_DestoryGPUQuerySet(pQuerySet);
 }
 
 //////////////
@@ -684,5 +684,5 @@ ASGI_GPU* asgiCreateGPUInstance(ASGI_GPU_INTERFACE_TYPE interfaceType)
 	default:
 		break;
 	}
-	return nullptr;
+	return 0;
 }

@@ -3,8 +3,8 @@
 #include "GPUDefines.h"
 #include "GPUBufferUsage.h"
 
-struct ASGI_GPUBufferDescriptor {
+typedef struct ASGI_GPUBufferDescriptor {
 	ASGI_GPUSize64 size;
 	ASGI_GPUBufferUsageFlags usage;
 	BOOL mappedAtCreation;
-};
+} ASGI_GPUBufferDescriptor;

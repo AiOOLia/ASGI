@@ -1,5 +1,5 @@
 #pragma once
 
-struct ASGI_GPUExternalTextureBindingLayout {
+typedef struct ASGI_GPUExternalTextureBindingLayout {
 	const char* label;
-};
+} ASGI_GPUExternalTextureBindingLayout;

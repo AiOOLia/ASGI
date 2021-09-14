@@ -1,6 +1,6 @@
 #pragma once
 
-enum ASGI_GPUBlendFactor {
+typedef enum ASGI_GPUBlendFactor {
 	ASGI_BLEND_FACTOR_Zero,
 	ASGI_BLEND_FACTOR_One,
 	ASGI_BLEND_FACTOR_Src,
@@ -14,4 +14,4 @@ enum ASGI_GPUBlendFactor {
 	ASGI_BLEND_FACTOR_SrcAlphaSaturated,
 	ASGI_BLEND_FACTOR_Constant,
 	ASGI_BLEND_FACTOR_OneMinusConstant
-};
+} ASGI_GPUBlendFactor;

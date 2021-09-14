@@ -11,9 +11,9 @@
 
 
 
-struct ASGI_GPUQueue {
+typedef struct ASGI_GPUQueue {
 	const char* label;
-};
+} ASGI_GPUQueue;
 
 void asgiSubmit (ASGI_GPUQueue* pQueue, int numCommandBuffer, ASGI_GPUCommandBuffer* pCommandBuffers);
 

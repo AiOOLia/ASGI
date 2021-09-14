@@ -3,7 +3,7 @@
 #include "GPUDefines.h"
 #include "GPUPowerPreference.h"
 
-struct ASGI_GPURequestAdapterOptions {
+typedef struct ASGI_GPURequestAdapterOptions {
 	ASGI_GPUPowerPreference powerPreference;
 	BOOL forceFallbackAdapter;
-};
+} ASGI_GPURequestAdapterOptions;

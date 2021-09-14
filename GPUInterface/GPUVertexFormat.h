@@ -1,6 +1,6 @@
 #pragma once
 
-enum ASGI_GPUVertexFormat {
+typedef enum ASGI_GPUVertexFormat {
 	ASGI_VERTEX_FORMAT_Uint8x2,
 	ASGI_VERTEX_FORMAT_Uint8x4,
 	ASGI_VERTEX_FORMAT_Sint8x2,
@@ -31,4 +31,4 @@ enum ASGI_GPUVertexFormat {
 	ASGI_VERTEX_FORMAT_Sint32x2,
 	ASGI_VERTEX_FORMAT_Sint32x3,
 	ASGI_VERTEX_FORMAT_Sint32x4
-};
+} ASGI_GPUVertexFormat;

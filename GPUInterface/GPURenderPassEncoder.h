@@ -8,11 +8,11 @@
 #include "GPUColor.h"
 
 
-struct ASGI_GPURenderPassEncoder {
+typedef struct ASGI_GPURenderPassEncoder {
 	const char* label;
 	ASGI_GPUProgrammablePassEncoder* programmablePassEncoder;
 	ASGI_GPURenderEncoderBase* renderEncoder;
-};
+} ASGI_GPURenderPassEncoder;
 
 void asgiSetScissorRect(ASGI_GPURenderPassEncoder* pEncoder, 
 	ASGI_GPUIntegerCoordinate x, ASGI_GPUIntegerCoordinate y,

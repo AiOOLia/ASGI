@@ -1,5 +1,5 @@
 #pragma once
 
-struct ASGI_GPUPipelineLayout {
+typedef struct ASGI_GPUPipelineLayout {
 	const char* label;
-};
+} ASGI_GPUPipelineLayout;

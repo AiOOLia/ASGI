@@ -6,7 +6,7 @@
 #include "GPUFrontFace.h"
 #include "GPUCullMode.h"
 
-struct ASGI_GPUPrimitiveState {
+typedef struct ASGI_GPUPrimitiveState {
 	ASGI_GPUPrimitiveTopology topology;
 	ASGI_GPUIndexFormat stripIndexFormat;
 	ASGI_GPUFrontFace frontFace;
@@ -14,4 +14,4 @@ struct ASGI_GPUPrimitiveState {
 
 	// Enable depth clamping (requires "depth-clamping" feature)
 	BOOL clampDepth;
-};
+} ASGI_GPUPrimitiveState;

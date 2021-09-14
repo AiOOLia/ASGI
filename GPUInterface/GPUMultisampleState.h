@@ -2,8 +2,8 @@
 
 #include "GPUDefines.h"
 
-struct ASGI_GPUMultisampleState {
+typedef struct ASGI_GPUMultisampleState {
 	ASGI_GPUSize32 count;
 	ASGI_GPUSampleMask mask;
 	BOOL alphaToCoverageEnabled;
-};
+} ASGI_GPUMultisampleState;

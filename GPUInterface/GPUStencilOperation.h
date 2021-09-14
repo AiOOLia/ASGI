@@ -1,6 +1,6 @@
 #pragma once
 
-enum ASGI_GPUStencilOperation {
+typedef enum ASGI_GPUStencilOperation {
 	ASGI_STENCIL_OP_Keep,
 	ASGI_STENCIL_OP_Zero,
 	ASGI_STENCIL_OP_Replace,
@@ -9,4 +9,4 @@ enum ASGI_GPUStencilOperation {
 	ASGI_STENCIL_OP_DecrementClamp,
 	ASGI_STENCIL_OP_IncrementWrap,
 	ASGI_STENCIL_OP_DecrementWrap
-};
+} ASGI_GPUStencilOperation;

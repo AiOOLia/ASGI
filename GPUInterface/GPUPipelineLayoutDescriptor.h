@@ -2,7 +2,7 @@
 
 #include "GPUBindGroupLayout.h"
 
-struct ASGI_GPUPipelineLayoutDescriptor {
+typedef struct ASGI_GPUPipelineLayoutDescriptor {
 	int numLayout;
 	ASGI_GPUBindGroupLayout* bindGroupLayouts;
-};
+} ASGI_GPUPipelineLayoutDescriptor;

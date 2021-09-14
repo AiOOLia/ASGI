@@ -1,5 +1,5 @@
 #pragma once
 
-struct ASGI_GPURenderBundleDescriptor {
+typedef struct ASGI_GPURenderBundleDescriptor {
 	const char* label;
-};
+} ASGI_GPURenderBundleDescriptor;
