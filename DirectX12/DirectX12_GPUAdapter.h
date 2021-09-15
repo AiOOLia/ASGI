@@ -8,4 +8,4 @@ typedef struct DX12_GPUAdapter {
 	//
 } DX12_GPUAdapter;
 
-ASGI_GPUDevice* dx12RequestDevice(ASGI_GPUAdapter* pAdapter, ASGI_GPUDeviceDescriptor* pDescriptor);
+ASGI_GPUDevice*  dx12RequestDevice(ASGI_GPUAdapter* pAdapter, ASGI_GPUDeviceDescriptor* pDescriptor);

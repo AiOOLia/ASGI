@@ -1,5 +1,6 @@
 #include "DirectX12_GPUDevice.h"
 
+
 ASGI_GPUBuffer* dx12CreateBuffer(ASGI_GPUDevice* pDevice, ASGI_GPUBufferDescriptor* pDescriptor)
 {
 	DX12_GPUDevice* pDxDevice = (DX12_GPUDevice*)pDevice;

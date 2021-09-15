@@ -30,8 +30,7 @@
 #include "GPURenderBundleEncoderDescriptor.h"
 #include "GPUQuerySet.h"
 #include "GPUQuerySetDescriptor.h"
-#include "GPUSwapChain.h"
-#include "GPUSwapChainDescriptor.h"
+
 
 struct ASGI_GPUAdapter;
 typedef struct ASGI_GPUDevice {
@@ -41,8 +40,6 @@ typedef struct ASGI_GPUDevice {
 	ASGI_GPUSupportedLimits limits;
 	ASGI_GPUQueue* queue;
 } ASGI_GPUDevice;
-
-ASGI_API ASGI_GPUSwapChain* asgiCreateSwapChain(ASGI_GPUDevice* pDevice, ASGI_GPUSwapChainDescriptor* pDescriptor);
 
 ASGI_API ASGI_GPUBuffer* asgiCreateBuffer(ASGI_GPUDevice* pDevice, ASGI_GPUBufferDescriptor* pDescriptor);
 
