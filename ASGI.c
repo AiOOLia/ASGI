@@ -6,6 +6,7 @@ struct GPUInterface
 	//
 	ASGI_GPUDevice* (*ASGI_FUNC_RequestDevice)(ASGI_GPUAdapter* pAdapter, ASGI_GPUDeviceDescriptor* pDescriptor);
 	//
+	ASGI_GPUSwapChain* (*ASGI_FUNC_CreateSwapChain)(ASGI_GPUDevice* pDevice, ASGI_GPUSwapChainDescriptor* pDescriptor);
 	ASGI_GPUBuffer* (*ASGI_FUNC_CreateBuffer)(ASGI_GPUDevice* pDevice, ASGI_GPUBufferDescriptor* pDescriptor);
 	ASGI_GPUTexture* (*ASGI_FUNC_CreateTexture)(ASGI_GPUDevice* pDevice, ASGI_GPUTextureDescriptor* pDescriptor);
 	ASGI_GPUSampler* (*ASGI_FUNC_CreateSampler)(ASGI_GPUDevice* pDevice, ASGI_GPUSamplerDescriptor* pDescriptor);
@@ -108,6 +109,13 @@ ASGI_GPUDevice* asgiRequestDevice(
 	return sGPU.ASGI_FUNC_RequestDevice(pAdapter, pDescriptor);
 }
 //
+ASGI_GPUSwapChain* asgiCreateSwapChain(
+	ASGI_GPUDevice* pDevice, 
+	ASGI_GPUSwapChainDescriptor* pDescriptor)
+{
+	return sGPU.ASGI_FUNC_CreateSwapChain(pDevice, pDescriptor);
+}
+
 ASGI_GPUBuffer* asgiCreateBuffer(
 	ASGI_GPUDevice* pDevice,
 	ASGI_GPUBufferDescriptor* pDescriptor)
